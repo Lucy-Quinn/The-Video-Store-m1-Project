@@ -5,21 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- font awesome CDN stylesheet-->
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet" />
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+    <!-- CSS stylesheet-->
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
 <body>
 
-
+    <!-- header  -->
     <header>
         <nav>
-            <div id="image-logo" class="logo">
+            <div id="image-logo" class="nav-logo">
 
                 <a href="./index.html">
                     <img id="video-store-logo" src="/images/logo.png" alt="The Video Store logo">
 
                 </a>
             </div>
+
 
             <div class="nav-bar">
                 <li>
@@ -35,49 +47,79 @@
                     <a href="./login.html">Login</a>
                 </li>
             </div>
+
+            <div id="hamburger-icon">
+                <i class="fas fa-film"></i>
+            </div>
+
         </nav>
+        <hr>
         <div id="header-image" class="header">
-            <div class="main-heading">
-                <h1>The Video Store</h1>
+            <div id="enter-button">
+                <button type="button" class="btn btn-secondary"><a href="./movie-selector.html">Enter
+                        the Video Store</a></button>
             </div>
         </div>
     </header>
+
+    <!-- end of header  -->
     <main>
         <section id="section-one-index">
-            <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi earum quidem natus sapiente illum
-                    cupiditate ipsam a sed aspernatur ad omnis dolor quaerat cum ea recusandae, suscipit cumque ut
-                    soluta.
-                    Nulla totam aperiam dignissimos? Aspernatur saepe est unde facilis cupiditate veniam libero, modi
-                    consequatur magni mollitia tenetur odit delectus, rerum non possimus. Aspernatur iusto, cupiditate
-                    nemo dolorem eligendi nobis dignissimos.
-                    Dicta blanditiis praesentium quisquam natus, nulla omnis consectetur necessitatibus ratione
-                    laudantium! Facilis aliquam molestiae, eligendi in magnam iure animi hic voluptatibus perspiciatis
-                    tenetur fuga repudiandae impedit alias repellendus nulla odit.
-                    Libero corporis tenetur magnam iusto fugit. Praesentium delectus quidem veritatis non a vel mollitia
-                    et odio aspernatur eligendi nihil corporis tempora fugit, sequi officiis! Optio aliquam eum ad unde
-                    voluptate.
-                    Amet facere repudiandae officiis modi! Nulla sunt, dolorum dignissimos saepe iste aut quas, ex
-                    suscipit quo quasi, quis officiis neque quidem doloremque harum unde laboriosam reiciendis fugiat
-                    aliquid eos repudiandae.</p>
-            </div>
-            <div>
-                <button><a href="./movie-selector.html">Enter Here...</a></button>
+            <div id="quotes">
+                <div class="quote-one">Toto, I've a feeling we're not in Kansas anymore.</div>
+                <div class="quote-two">E.T. phone home.</div>
+                <div class="quote-three">Life was like a box of chocolates. You never know what you're gonna get.
+                </div>
+                <div class="quote-four">Here's Johnny!</div>
+                <div class="quote-five">Show me the money!</div>
+                <div class="quote-six">My precious.</div>
             </div>
         </section>
+        <!-- carousel  -->
         <section id="section-two-index">
-            <div id="main-movie-image-one">
-            </div>
-            <div id="main-movie-image-two">
-            </div>
-            <div id="main-movie-image-three">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="./images/inception.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/shawshank.png" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/king-kong.jpg" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/titanic.jpg" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </section>
     </main>
+    <footer>
+
+    </footer>
+
+    <!-- bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
 
 
+    <!-- JavaScipt -->
     <script src="./src/main.js"></script>
-    <script src="./src/database.js"></script>
+    <script src="./src/service.js"></script>
+
 
 </body>
 

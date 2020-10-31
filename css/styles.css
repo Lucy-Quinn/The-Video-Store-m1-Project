@@ -130,48 +130,179 @@ table {
 
 /*********** End of CSS reset *****************/
 
+/* font family */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+
 /* basic styling */
 
 html {
   font-size: 10px;
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(199, 197, 197);
 }
-h1 {
-  color: white;
-  font-size: 4rem;
+body {
+  overflow: scroll;
+}
+main {
+  height: 100%;
 }
 
+h1 {
+  color: black;
+  font-size: 4rem;
+  font-weight: 700;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* nav */
 nav {
   background-color: black;
   width: 100%;
-  height: 100px;
+  height: 90px;
   display: flex;
   justify-content: space-between;
+  padding: 15px 10px 15px 10px;
+  align-items: center;
 }
-.logo {
-  width: 100%;
-  height: 80px;
+.nav-logo {
+  width: 38%;
+  height: 70px;
 }
 #video-store-logo {
-  width: 35%;
+  width: 60%;
   height: auto;
 }
-.nav-bar li {
-  display: inline;
+.nav-bar {
+  display: none;
 }
-.nav-bar a {
+.nav-bar {
+  width: 70%;
+  height: 80px;
+}
+.hamburger-icon {
+  width: 40%;
+  margin-right: 10px;
+}
+.fa-film {
+  font-size: 4rem;
+  padding-right: 20px;
   color: white;
+  text-align: center;
 }
+hr {
+  border: none;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.646);
+  box-shadow: 0 15px 15px -0px #333;
+  margin: 0px;
+}
+
 /* Index page */
 #header-image {
   margin: 0 auto;
   width: 100%;
-  height: 500px;
+  height: 300px;
   background-image: url("/images/header-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
+}
+#enter-button {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.btn-secondary {
+  width: 150px;
+  height: 30px;
+  text-align: center;
+}
+#section-one-index {
+  background-color: rgb(231, 213, 213);
+  padding: 20px;
+  display: flex;
+}
+#quotes {
+  position: relative;
+  width: 150px;
+  height: 200px;
+}
+.quote-one,
+.quote-two,
+.quote-three,
+.quote-four,
+.quote-five,
+.quote-six {
+  border-radius: 25px;
+  border: 2px solid black;
+}
+.quote-one {
+  position: absolute;
+  left: 180px;
+  width: 100px;
+  height: 70px;
+  text-align: center;
+  padding: 10px;
+}
+.quote-two {
+  position: absolute;
+  left: 180px;
+  top: 150px;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  padding: 10px;
+}
+.quote-three {
+  position: absolute;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 130px;
+  height: 65px;
+  text-align: center;
+  padding: 10px;
+}
+.quote-four {
+  position: absolute;
+  position: absolute;
+  left: 10px;
+  top: 100px;
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  padding: 10px;
+}
+.quote-five {
+  position: absolute;
+  position: absolute;
+  left: 140px;
+  top: 80px;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  padding: 10px;
+}
+.quote-six {
+  position: absolute;
+  position: absolute;
+  left: 10px;
+  top: 150px;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  padding: 10px;
 }
 
+#section-two-index img {
+  width: 100%;
+  height: auto;
+  background-position: center;
+}
 #section-two-index {
   display: flex;
 }
@@ -179,23 +310,85 @@ nav {
 #main-movie-image-two,
 #main-movie-image-three {
   width: 35%;
-  height: 250px;
+  height: auto;
   background-color: gray;
   border: 1px solid black;
 }
 
 /* movie-selection page */
 
+#list-of-films {
+  display: flex;
+  overflow: scroll;
+  /* justify-content */
+}
+.movie-card img {
+  width: 200px;
+  height: auto;
+}
+.movie-card {
+  width: 200px;
+}
+
 /* FAQ page */
 
 /* signup page */
+#section-one-signup {
+  width: 100%;
+  height: auto;
+  padding: 20px 0px 20px 0px;
+  text-align: center;
+  background-color: rgb(199, 197, 197);
+}
+#section-two-signup {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+form {
+  background-color: rgb(199, 197, 197);
+  width: 100%;
+  height: 300px;
+  display: block;
+}
+#section-two-signup ul {
+  display: flex;
+  justify-content: flex-end;
+}
 
 /* login page  */
 
 /* max-width: 768 */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+  #header-image {
+    margin: 0 auto;
+    width: 100%;
+    height: 300px;
+    background-image: none;
+    background-color: red;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 /* max-width: 1024 */
 /* @media (max-width: 1024) { */
 /* } */
+
+/* possibly for desktop */
+/* .nav-bar {
+    width: 70%;
+    height: 80px;
+    display: flex;
+  } */
+/* .nav-bar li {
+  display: inline;
+  padding: 10px 5px 10px 5px;
+}
+.nav-bar li:last-child {
+  padding-right: 10px;
+}
+.nav-bar a {
+  color: white;
+  height: 100px;
+} */

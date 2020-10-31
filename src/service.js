@@ -10,6 +10,7 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=d0d72ad03cd6e6a02d49
         const moviesArray = data.results
         moviesArray.forEach((movie) => {
             const article = document.createElement('article');
+            article.setAttribute('class', 'movie-card');
             article.innerHTML = `
             <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" />
             <p>${movie.title}</>
