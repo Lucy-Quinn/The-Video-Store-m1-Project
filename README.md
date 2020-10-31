@@ -22,6 +22,7 @@ Are you a film buff and you need some inspiration? 🎬 Looking for that film th
 
 - More strict password validation.
 - Add more details about each film and special effects on the Movie Selector page.
+- Add speech bubbles on the main page.
 
 ## Wireframes
 
@@ -32,7 +33,7 @@ Are you a film buff and you need some inspiration? 🎬 Looking for that film th
 - **root/**
   - index.html
   
-  - movieSelector.html
+  - movie-selector.html
   
   - faq.html
   
