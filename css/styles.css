@@ -128,6 +128,8 @@ table {
   border-spacing: 0;
 }
 
+/*********** End of CSS reset *****************/
+
 /* basic styling */
 
 html {
@@ -135,8 +137,32 @@ html {
 }
 h1 {
   color: white;
+  font-size: 4rem;
 }
-#header {
+
+nav {
+  background-color: black;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 100%;
+  height: 80px;
+}
+#video-store-logo {
+  width: 35%;
+  height: auto;
+}
+.nav-bar li {
+  display: inline;
+}
+.nav-bar a {
+  color: white;
+}
+/* Index page */
+#header-image {
   margin: 0 auto;
   width: 100%;
   height: 500px;
@@ -146,17 +172,26 @@ h1 {
   background-position: center;
 }
 
-#section-two {
+#section-two-index {
   display: flex;
 }
 #main-movie-image-one,
 #main-movie-image-two,
 #main-movie-image-three {
-  width: 33%;
-  height: 150px;
+  width: 35%;
+  height: 250px;
   background-color: gray;
   border: 1px solid black;
 }
+
+/* movie-selection page */
+
+/* FAQ page */
+
+/* signup page */
+
+/* login page  */
+
 /* max-width: 768 */
 @media (max-width: 768px) {
 }

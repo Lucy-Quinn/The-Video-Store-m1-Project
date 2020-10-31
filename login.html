@@ -5,10 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
 <body>
 
+    <nav>
+        <div id="image-logo" class="logo">
+            <a href="./index.html">
+                <img src="/images/logo.png" alt="The Video Store logo">
+            </a>
+        </div>
+        <div class="nav-bar">
+            <li>
+                <a href="./index.html">Home</a>
+            </li>
+            <li>
+                <a href="./movie-selector.html">Movie Selector</a>
+            </li>
+            <li>
+                <a href="./faq.html">FAQ</a>
+            </li>
+            <li>
+                <a href="/signup.html">Sign Up</a>
+            </li>
+            <li>
+                <a href="./login.html">Login</a>
+            </li>
+        </div>
+    </nav>
+
+    <main>
+        <section id="section-one-login">
+            <div>
+                <h1>Login</h1>
+            </div>
+            <div>
+                <img src="./images/popcorn.png" alt="">
+            </div>
+        </section>
+        <section id="section-two-login">
+            <div>
+                <form action="" class="form-inputs">
+                    <input type="email" id="email" placeholder="Email" />
+                    <input type="password" id="password" placeholder="Password" />
+                    <button type="submit" id="login-button" class="button-input">Log In</button>
+                </form>
+                <div class="message-container"></div>
+                <div class="success-container"></div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
