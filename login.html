@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="css/styles.css">
     <!-- font awesome CDN stylesheet-->
     <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet" />
@@ -61,25 +61,34 @@
 
     <main>
         <section id="section-one-login">
-            <div>
+            <div class="h1-styling">
                 <h1>Login</h1>
             </div>
-            <div>
+            <div id="popcorn-image">
                 <img src="./images/popcorn.png" alt="">
             </div>
         </section>
         <section id="section-two-login">
-            <div>
-                <form action="" class="form-inputs">
-                    <input type="email" id="email" placeholder="Email" />
-                    <input type="password" id="password" placeholder="Password" />
-                    <button type="submit" id="login-button" class="button-input">Log In</button>
-                </form>
-                <div class="message-container"></div>
-                <div class="success-container"></div>
-            </div>
+            <form action="" class="form-inputs form-login">
+                <input type="email" id="email" placeholder="Email" />
+                <input type="password" id="password" placeholder="Password" />
+
+                <button type="button" class="btn btn-secondary sign-up-btn">
+                    <a href="./movie-selector.html">Login</a>
+                </button>
+
+            </form>
+            <div class="message-container"></div>
+            <div class="success-container"></div>
         </section>
     </main>
+
+    <footer>
+        <p>The Video Store ©2020</p>
+        <img src="./images/tmdb.svg" alt="Logo of tmdb">
+        <p>Icons provided by TMDB</p>
+
+    </footer>
 </body>
 
 </html>

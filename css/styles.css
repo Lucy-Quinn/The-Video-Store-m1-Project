@@ -144,6 +144,7 @@ body {
   overflow: scroll;
 }
 main {
+  width: 100%;
   height: 100%;
 }
 
@@ -155,6 +156,53 @@ h1 {
 a {
   text-decoration: none;
   color: #fff;
+  font-size: 1.6rem;
+}
+.h1-styling {
+  width: 100%;
+  height: auto;
+  padding: 20px 0px 20px 0px;
+  text-align: center;
+  background-color: rgb(199, 197, 197);
+}
+form {
+  background-color: rgb(199, 197, 197);
+  width: 100%;
+  display: block;
+}
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 70%;
+}
+input[type="password"] {
+  margin-bottom: 10px;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer > img {
+  width: 35px;
+}
+
+footer > p {
+  color: #fff;
+  padding: 5px 0px;
+  font-size: 0.7rem;
 }
 
 /* nav */
@@ -221,6 +269,10 @@ hr {
   height: 30px;
   text-align: center;
 }
+.btn-enter {
+  width: 170px;
+  height: 35px;
+}
 #section-one-index {
   /* background-color: rgb(231, 213, 213); */
   background-color: rgb(199, 197, 197);
@@ -241,6 +293,7 @@ hr {
 .quote-six {
   border-radius: 25px;
   border: 2px solid black;
+  background-color: #fff;
 }
 .quote-one {
   position: absolute;
@@ -318,48 +371,47 @@ hr {
 }
 
 /* movie-selection page */
-
+#section-one-movie-selector {
+  background-color: rgb(199, 197, 197);
+  padding: 20px;
+  /* width: 100%; */
+  /* height: auto; */
+}
+#section-one-movie-selector > h1 {
+  width: 270px;
+}
 #list-of-films {
+  /* width: 100%; */
   display: flex;
-  overflow: scroll;
-  /* justify-content */
+  flex-direction: column;
+  /* overflow: scroll; */
+  background-color: rgb(199, 197, 197);
 }
 .movie-card img {
-  width: 200px;
+  width: 320px;
   height: auto;
 }
 .movie-card {
-  width: 200px;
+  height: auto;
+  padding: 20px 0px 20px 0px;
+}
+.movie-card p {
+  font-size: 1rem;
+  /* width: 320px; */
 }
 
 /* FAQ page */
 
-/* signup page */
-#section-one-signup {
-  width: 100%;
-  height: auto;
-  padding: 20px 0px 20px 0px;
-  text-align: center;
-  background-color: rgb(199, 197, 197);
-}
-form {
-  background-color: rgb(199, 197, 197);
-  width: 100%;
+.form-faq {
   height: 300px;
-  display: block;
-  margin: 0px 0px 30px 0px;
 }
-.form-inputs {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+
+/* signup page */
+
+.form-signup {
+  height: 350px;
 }
-input {
-  padding: 10px;
-  margin-bottom: 10px;
-  width: 70%;
-}
+
 .sign-up-btn {
   margin: 15px 0px;
   padding: 10px 10px 10px 10px;
@@ -369,6 +421,23 @@ input {
 }
 
 /* login page  */
+#section-two-login {
+  width: 100%;
+  height: auto;
+}
+#popcorn-image {
+  padding-bottom: 0;
+  background-color: rgb(199, 197, 197);
+  text-align: center;
+}
+#popcorn-image > img {
+  width: 30%;
+  height: auto;
+  padding: 20px 0px 20px 0px;
+}
+.form-login {
+  height: 200px;
+}
 
 /* max-width: 768 */
 @media (min-width: 768px) {
