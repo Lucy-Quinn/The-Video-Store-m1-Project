@@ -34,7 +34,7 @@ ins,
 kbd,
 q,
 s,
-samp,
+l samp,
 small,
 strike,
 strong,
@@ -133,30 +133,38 @@ table {
 /* font family */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap");
 
+/* CSS variables */
+
+:root {
+  --background-color: rgb(199, 197, 197);
+  --white-color: #fff;
+  --black-color: black;
+}
+
 /* basic styling */
 
 html {
   font-size: 10px;
   font-family: "Roboto", sans-serif;
-  background-color: rgb(199, 197, 197);
 }
 body {
   overflow: scroll;
+  background-color: var(--background-color);
 }
 main {
   width: 100%;
   height: 100%;
-  background-color: rgb(199, 197, 197);
+  /* background-color: rgb(199, 197, 197); */
 }
-
 h1 {
-  color: black;
+  color: var(--black-color);
   font-size: 4rem;
   font-weight: 700;
 }
+
 a {
   text-decoration: none;
-  color: #fff;
+  color: var(--white-color);
   font-size: 1.6rem;
 }
 a:active {
@@ -168,10 +176,10 @@ a:active {
   height: auto;
   padding: 20px 0px 20px 0px;
   text-align: center;
-  background-color: rgb(199, 197, 197);
+  /* background-color: rgb(199, 197, 197); */
 }
 form {
-  background-color: rgb(199, 197, 197);
+  /* background-color: rgb(199, 197, 197); */
   width: 100%;
   display: block;
 }
@@ -180,6 +188,7 @@ form {
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  font-size: 1.1rem;
 }
 input {
   padding: 10px;
@@ -193,7 +202,7 @@ input[type="password"] {
 footer {
   width: 100%;
   height: 50px;
-  background-color: black;
+  background-color: var(--black-color);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -205,14 +214,15 @@ footer > img {
 }
 
 footer > p {
-  color: #fff;
+  color: var(--white-color);
   padding: 5px 0px;
   font-size: 0.7rem;
 }
 
 /* nav */
+
 nav {
-  background-color: black;
+  background-color: var(--black-color);
   width: 100%;
   height: 90px;
   display: flex;
@@ -235,25 +245,26 @@ nav {
   height: 80px;
   position: absolute;
   top: 25%;
-  left: 72%;
+  left: 73%;
+  z-index: 1;
 }
 
 .nav-bar li {
   display: block;
   padding: 10px 5px 10px 5px;
   text-align: center;
-  background-color: rgb(199, 197, 197);
+  background-color: var(--white-color);
   border: 1px solid black;
 }
 .nav-bar li:last-child {
   padding-right: 10px;
 }
 .nav-bar a {
-  color: black;
+  color: var(--black-color);
   height: 100px;
 }
 .nav-bar a:hover {
-  color: #fff;
+  color: var(--white-color);
 }
 .hamburger-icon {
   width: 40%;
@@ -263,14 +274,101 @@ nav {
 .fa-film {
   font-size: 4rem;
   padding-right: 20px;
-  color: white;
+  color: var(--white-color);
   text-align: center;
 }
 hr {
   border: none;
   border-bottom: 1px solid rgba(128, 128, 128, 0.646);
-  box-shadow: 0 15px 15px -0px #333;
+  /* box-shadow: 0 15px 15px -0px #333; */
+  box-shadow: 0 10px 10px -10px #8c8c8c inset;
   margin: 0px;
+}
+
+@media (min-width: 375px) {
+  .nav-bar {
+    left: 76%;
+  }
+  .nav-logo {
+    margin-bottom: 10px;
+  }
+  #video-store-logo {
+    top: 50px;
+    width: 55%;
+    height: auto;
+  }
+}
+
+@media (min-width: 425px) {
+  .nav-bar {
+    left: 79%;
+    top: 25%;
+  }
+  .nav-logo {
+    margin-bottom: 15px;
+  }
+
+  #video-store-logo {
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-bar {
+    left: 88%;
+  }
+
+  .nav-logo {
+    margin-bottom: 20px;
+  }
+
+  #video-store-logo {
+    width: 30%;
+    height: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .nav-logo {
+    margin-bottom: 20px;
+  }
+
+  #video-store-logo {
+    width: 22%;
+    height: auto;
+  }
+
+  .nav-bar {
+    width: 600px;
+    height: 70px;
+    display: flex !important;
+    left: 40%;
+    top: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-bar li {
+    width: 200px;
+    padding: 10px 5px 10px 5px;
+    margin: 10px;
+    border-radius: 25px;
+    background-color: var(--background-color);
+  }
+  .nav-bar li:last-child {
+    padding-right: 10px;
+  }
+  .nav-bar a {
+    color: white;
+    display: inline;
+  }
+
+  .hamburger-icon {
+    width: 0;
+  }
+  .fa-film {
+    display: none;
+  }
 }
 
 /* Index page */
@@ -282,11 +380,10 @@ hr {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
 }
 #enter-button {
   position: absolute;
-  top: 25%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -296,7 +393,7 @@ hr {
   text-align: center;
 }
 .btn-secondary a:hover {
-  color: #fff;
+  color: var(--white-color);
   box-shadow: 0px 0px 100px 0px rgba(255, 165, 0, 1);
   transition: background-color 40s linear;
 }
@@ -306,9 +403,7 @@ hr {
 }
 
 #section-one-index {
-  /* background-color: rgb(231, 213, 213); */
-  background-color: rgb(199, 197, 197);
-
+  /* background-color: rgb(199, 197, 197); */
   padding: 20px;
   display: flex;
 }
@@ -325,16 +420,22 @@ hr {
 .quote-six {
   border-radius: 25px;
   border: 2px solid black;
-  background-color: #fff;
+  background-color: var(--white-color);
+  padding: 10px;
+  font-size: 1.1rem;
 }
+/*Toto quote*/
+
 .quote-one {
   position: absolute;
-  left: 180px;
+  left: 190px;
   width: 100px;
   height: 70px;
   text-align: center;
-  padding: 10px;
 }
+
+/* E.T. */
+
 .quote-two {
   position: absolute;
   left: 180px;
@@ -342,47 +443,50 @@ hr {
   width: 100px;
   height: 50px;
   text-align: center;
-  padding: 10px;
 }
+
+/* Forest Gump */
 .quote-three {
   position: absolute;
-  position: absolute;
-  left: 10px;
+  left: 5px;
   top: 10px;
   width: 130px;
   height: 65px;
   text-align: center;
-  padding: 10px;
 }
+
+/* Here's Jonny */
+
 .quote-four {
   position: absolute;
-  position: absolute;
-  left: 10px;
+  left: 5px;
   top: 100px;
   width: 100px;
   height: 35px;
   text-align: center;
-  padding: 10px;
 }
+
+/* Jerry Maguire */
+
 .quote-five {
   position: absolute;
-  position: absolute;
-  left: 140px;
+  left: 130px;
   top: 80px;
   width: 100px;
   height: 50px;
   text-align: center;
-  padding: 10px;
 }
+
+/* Lord of the Rings*/
+
 .quote-six {
   position: absolute;
   position: absolute;
-  left: 10px;
-  top: 150px;
+  left: 2px;
+  top: 160px;
   width: 100px;
-  height: 50px;
+  height: 40px;
   text-align: center;
-  padding: 10px;
 }
 
 #section-two-index img {
@@ -393,20 +497,161 @@ hr {
 #section-two-index {
   display: flex;
 }
-#main-movie-image-one,
-#main-movie-image-two,
-#main-movie-image-three {
-  width: 35%;
-  height: auto;
-  background-color: gray;
-  border: 1px solid black;
+
+@media (min-width: 375px) {
+  /*Toto quote*/
+  .quote-one {
+    left: 230px;
+  }
+
+  /* E.T. */
+  .quote-two {
+    left: 200px;
+  }
+
+  /* Jerry Maguire */
+  .quote-five {
+    left: 150px;
+  }
+}
+
+@media (min-width: 425px) {
+  .quote-one,
+  .quote-two,
+  .quote-three,
+  .quote-four,
+  .quote-five,
+  .quote-six {
+    padding: 15px;
+    width: 150px;
+    height: auto;
+    font-size: 1.3rem;
+  }
+  /*Toto quote*/
+  .quote-one {
+    left: 180px;
+  }
+
+  /* E.T. */
+  .quote-two {
+    left: 220px;
+  }
+  /* Forest Gump */
+  .quote-three {
+    top: 5px;
+  }
+
+  /* Here's Jonny */
+
+  .quote-four {
+    left: 50px;
+  }
+
+  /* Jerry Maguire */
+  .quote-five {
+    left: 250px;
+  }
+}
+
+@media (min-width: 768px) {
+  .quote-one,
+  .quote-two,
+  .quote-three,
+  .quote-four,
+  .quote-five,
+  .quote-six {
+    padding: 15px;
+    width: 150px;
+    height: auto;
+    font-size: 1.4rem;
+  }
+
+  /*Toto quote*/
+  .quote-one {
+    left: 550px;
+  }
+
+  /* E.T. */
+  .quote-two {
+    left: 490px;
+    top: 120px;
+  }
+  /* Forest Gump */
+  .quote-three {
+    top: 5px;
+    width: 220px;
+    height: auto;
+  }
+
+  /* Here's Jonny */
+
+  .quote-four {
+    left: 230px;
+    top: 120px;
+  }
+
+  /* Jerry Maguire */
+  .quote-five {
+    left: 290px;
+    top: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .quote-one,
+  .quote-two,
+  .quote-three,
+  .quote-four,
+  .quote-five,
+  .quote-six {
+    padding: 15px;
+    width: 150px;
+    height: auto;
+    font-size: 1.5rem;
+  }
+
+  /*Toto quote*/
+  .quote-one {
+    left: 660px;
+  }
+
+  /* E.T. */
+  .quote-two {
+    left: 800px;
+    top: 120px;
+  }
+  /* Forest Gump */
+  .quote-three {
+    top: 5px;
+    width: 220px;
+    height: auto;
+  }
+
+  /* Here's Jonny */
+
+  .quote-four {
+    left: 440px;
+    top: 140px;
+  }
+
+  /* Jerry Maguire */
+  .quote-five {
+    left: 320px;
+    top: 10px;
+  }
+
+  /* Lord of the Rings*/
+
+  .quote-six {
+    top: 140px;
+    left: 180px;
+  }
 }
 
 /* movie-selection page */
 #section-one-movie-selector {
-  background-color: rgb(199, 197, 197);
+  /* background-color: rgb(199, 197, 197); */
   padding: 20px;
-  /* width: 100%; */
   /* height: auto; */
 }
 #section-one-movie-selector > h1 {
@@ -417,7 +662,7 @@ hr {
   display: flex;
   flex-direction: column;
   /* overflow: scroll; */
-  background-color: rgb(199, 197, 197);
+  /* background-color: rgb(199, 197, 197); */
 }
 
 .movie-card {
@@ -429,6 +674,7 @@ hr {
   width: 320px;
   height: auto;
 }
+
 .hidden {
   display: none;
 }
@@ -437,22 +683,21 @@ hr {
   font-size: 1rem;
 }
 
-.toggle-false {
-  display: block;
+.text-overlay {
+  background-color: grey;
+  opacity: 0.5;
 }
-.toggle-true {
-  display: none;
-}
+
 /* FAQ page */
 
 .questions {
   padding: 15px;
   width: 100%;
+  height: auto;
   border: 1px solid black;
   margin-bottom: 10px;
 }
 #section-two-faq {
-  /* background-color: rgb(199, 197, 197); */
   padding: 20px;
 }
 #section-two-faq p {
@@ -468,18 +713,29 @@ hr {
   transition: 0.2s ease;
 }
 
-/* signup page */
+@media (max-width: 425px) {
+  .questions {
+    width: 250px;
+  }
+}
 
+/* signup page */
 .form-signup {
   height: 350px;
 }
 
-.sign-up-btn {
+.btns {
   margin: 15px 0px;
-  padding: 10px 10px 10px 10px;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 768px) {
+  .sign-up-btn {
+    padding: 20px;
+  }
 }
 
 /* login page  */
@@ -489,7 +745,7 @@ hr {
 }
 #popcorn-image {
   padding-bottom: 0;
-  background-color: rgb(199, 197, 197);
+  /* background-color: rgb(199, 197, 197); */
   text-align: center;
 }
 #popcorn-image > img {
@@ -502,16 +758,9 @@ hr {
 }
 
 /* max-width: 768 */
-@media (min-width: 768px) {
-  #header-image {
-    margin: 0 auto;
-    width: 100%;
-    height: 300px;
-    background-image: none;
-    background-color: red;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+@media (min-width: 1024px) {
+  #section-two-login input {
+    width: 350px;
   }
 }
 
