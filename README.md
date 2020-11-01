@@ -12,11 +12,9 @@ Are you a film buff and you need some inspiration? 🎬 Looking for that film th
 
 - **Homepage** => it will include all the links to navigate around the app and the 'Enter' button which will direct the user to the 'Film Selection' page.
 - **Film Selection** => this page will include the selection of movies. Offering the user the chance to browse and rate the selection of movies and feel inspired. 
+- **FAQ** => Everything you would like to know about the Video Store.
 - **Sign Up** => A registration for new users, with both email and password validation.
 - **Login** => A form for signed up users with email and password validation.
-- **FAQ** => Everything you would like to know about the Video Store.
-
-
 
 ## Backlog
 
@@ -49,6 +47,7 @@ Are you a film buff and you need some inspiration? 🎬 Looking for that film th
     - main.js
     - login.js
     - database.js
+    - service-api.js
     - signup.js
     - user.js
     - validator.js
