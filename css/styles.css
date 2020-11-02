@@ -741,6 +741,8 @@ hr {
 #section-one-movie-selector {
   /* background-color: rgb(199, 197, 197); */
   padding: 20px;
+  display: flex;
+  justify-content: center;
   /* height: auto; */
 }
 #section-one-movie-selector > h1 {
@@ -828,12 +830,61 @@ hr {
   border: 2px solid rgb(161, 62, 62);
   margin-bottom: 20px;
 }
+#all-stars{
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem;
+  padding-bottom: 20px;
+  text-align: center;
+  /* position: absolute; */
+  /* top: 500px; */
+}
+.stars-full{
+  color: yellow;
+}
 
 /* .text-overlay p {
   display: block;
 } */
 
-/* @media (min-width: ) */
+@media (min-width: 375px) {
+  .text-show {
+    margin-left: 28px;
+  }
+  .movie-card{
+    margin: 0;
+  }
+}
+
+@media (min-width: 425px) {
+  .text-show {
+    margin-left: 53px;
+ 
+}
+
+@media (min-width: 768px) {
+  #list-of-films {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .text-show {
+    /* margin-left: 224px; */
+  }
+
+  #section-two-movie-selector{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .text-show {
+    /* margin-left: 224px; */
+  }
+
+
+}
 
 /* FAQ page */
 

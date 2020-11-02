@@ -11,17 +11,30 @@ function movieSelector() {
 
             const moviesArray = data.results
             moviesArray.forEach((movie) => {
+
+                //create elements
                 const article = document.createElement('article');
                 const overlay = document.createElement('article');
-                const moviecontainer = document.createElement('div');
+                const movieContainer = document.createElement('div');
+                const stars = document.createElement('div')
 
+                //set class attributes
                 article.setAttribute('class', 'movie-card');
-                moviecontainer.setAttribute('class', 'movie-container');
+                movieContainer.setAttribute('class', 'movie-container');
                 overlay.setAttribute('class', 'text-overlay');
 
+                //amending html/styling
                 article.style.backgroundImage = `url('https://image.tmdb.org/t/p/w500${movie.poster_path}')`;
 
-
+                stars.innerHTML = `
+                <section id="all-stars">
+                <div class="stars"><i class="fas fa-star"></i></div>
+                <div class="stars"><i class="fas fa-star"></i></div>
+                <div class="stars"><i class="fas fa-star"></i></div>
+                <div class="stars"><i class="fas fa-star"></i></div>
+                <div class="stars"><i class="fas fa-star"></i></div>
+                </section>
+                `
                 // article.innerHTML = `
                 //     <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" />              
                 // `
@@ -32,14 +45,17 @@ function movieSelector() {
                 <p>${movie.vote_average}</p>
                 `
 
-                moviecontainer.appendChild(article)
-                moviecontainer.appendChild(overlay)
+                //append elements to
+                movieContainer.appendChild(article)
+                movieContainer.appendChild(overlay)
+                movieContainer.appendChild(stars)
+
+                //append movieContainer to list-of-films
                 const filmId = document.getElementById('list-of-films');
+                filmId.appendChild(movieContainer)
+                movieContainer.addEventListener('click', showMovieDetails)
 
-
-                filmId.appendChild(moviecontainer)
-                moviecontainer.addEventListener('click', showMovieDetails)
-
+                stars.addEventListener('click', changeStars);
             })
 
             console.log('data', data);
@@ -63,6 +79,16 @@ function showMovieDetails() {
     // this.classList.toggle('text-show')
 
     // this.classList.toggle("hide");
+}
+
+function changeStars(event) {
+
+    const stars = event.target;
+    stars.querySelector('.stars')
+    console.log(stars);
+    // stars.setAttribute('class', 'stars')
+    stars.classList.toggle("stars-full")
+
 }
 
 
