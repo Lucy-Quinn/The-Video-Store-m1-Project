@@ -19,10 +19,12 @@ function movieSelector() {
                 moviecontainer.setAttribute('class', 'movie-container');
                 overlay.setAttribute('class', 'text-overlay');
 
+                article.style.backgroundImage = `url('https://image.tmdb.org/t/p/w500${movie.poster_path}')`;
 
-                article.innerHTML = `
-                    <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" />              
-                `
+
+                // article.innerHTML = `
+                //     <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" />              
+                // `
                 overlay.innerHTML = `
                 <p>${movie.title}</>
                 <p>${movie.genre_ids}
@@ -44,27 +46,22 @@ function movieSelector() {
         })
 }
 movieSelector();
-// const listOfFilms = document.querySelector('.movie-container');
-// listOfFilms.addEventListener('click', showMovieDetails);
-// console.log('list', listOfFilms);
 
-// document.addEventListener('click', function () {
-//     if (document.querySelector('.movie-container')) {
-
-//         const movie = document.querySelector('.movie-container')
-//         console.log(movie);
-//     }
-// });
 
 function showMovieDetails() {
-    console.log('this', this);
+    console.log('SHOWMOVIE DETAILS',);
 
-    const overlay = document.querySelector('.text-overlay')
-    overlay.setAttribute('class', 'text-show');
+    const overlay = this.querySelector('.text-overlay')
+    const movieCard = this.querySelector('.movie-card');
+    console.log(movieCard);
+    // overlay.setAttribute('class', 'text-show');
+
+    overlay.classList.toggle('text-show');
+    // movieCard.toggle('hide'); // comment out => may need it?
 
 
     console.log(overlay);
     // this.classList.toggle('text-show')
 
-    this.classList.toggle("movie-card");
+    // this.classList.toggle("hide");
 }
