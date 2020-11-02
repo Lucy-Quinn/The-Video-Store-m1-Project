@@ -26,10 +26,10 @@ function movieSelector() {
                 //     <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" />              
                 // `
                 overlay.innerHTML = `
-                <p>${movie.title}</>
-                <p>${movie.genre_ids}
-                <p>${movie.overview}
-                <p>${movie.vote_average}
+                <h2>${movie.title}</h2>
+                <p>${movie.genre_ids}</p>
+                <p>${movie.overview}</p>
+                <p>${movie.vote_average}</p>
                 `
 
                 moviecontainer.appendChild(article)
@@ -49,15 +49,14 @@ movieSelector();
 
 
 function showMovieDetails() {
-    console.log('SHOWMOVIE DETAILS',);
 
     const overlay = this.querySelector('.text-overlay')
     const movieCard = this.querySelector('.movie-card');
-    console.log(movieCard);
+    // console.log(movieCard);
     // overlay.setAttribute('class', 'text-show');
 
     overlay.classList.toggle('text-show');
-    // movieCard.toggle('hide'); // comment out => may need it?
+    movieCard.classList.toggle('hide'); // comment out => may need it?
 
 
     console.log(overlay);
