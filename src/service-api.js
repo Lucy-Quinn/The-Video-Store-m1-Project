@@ -16,8 +16,9 @@ function movieSelector() {
                 const moviecontainer = document.createElement('div');
 
                 article.setAttribute('class', 'movie-card');
-                overlay.setAttribute('class', 'hidden');
                 moviecontainer.setAttribute('class', 'movie-container');
+                overlay.setAttribute('class', 'text-overlay');
+
 
                 article.innerHTML = `
                     <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" />              
@@ -58,7 +59,12 @@ movieSelector();
 function showMovieDetails() {
     console.log('this', this);
 
-    // this.classList.toggle('hidden')
+    const overlay = document.querySelector('.text-overlay')
+    overlay.setAttribute('class', 'text-show');
+
+
+    console.log(overlay);
+    // this.classList.toggle('text-show')
 
     this.classList.toggle("movie-card");
 }

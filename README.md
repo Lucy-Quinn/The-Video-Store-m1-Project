@@ -1,6 +1,6 @@
 # The Video Store - M1 Project
 
-
+![movieticket](/Users/lucyquinn/Downloads/movieticket.png)
 
 ## Description
 
