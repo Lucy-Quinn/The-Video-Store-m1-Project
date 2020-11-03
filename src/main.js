@@ -1,22 +1,20 @@
 
-//Hamburger menu
-function dropDownMenu() {
-    const navBar = document.querySelector(".nav-bar");
-    if (navBar.style.display === "none") {
-        navBar.style.display = "block";
-    } else {
-        navBar.style.display = "none";
-    }
-}
+// // Hamburger menu
+// function dropDownMenu() {
+//     const navBar = document.querySelector(".nav-bar");
+//     if (navBar.style.display === "none") {
+//         navBar.style.display = "block";
+//     } else {
+//         navBar.style.display = "none";
+//     }
+// }
 
-const hamburgerIcon = document.getElementById("hamburger-icon");
-hamburgerIcon.addEventListener('click', dropDownMenu)
+// const hamburgerIcon = document.getElementById("hamburger-icon");
+// hamburgerIcon.addEventListener('click', dropDownMenu)
 
-//Index page => Enter button
 
-function enlargenEnterButton() {
 
-}
+
 
 
 

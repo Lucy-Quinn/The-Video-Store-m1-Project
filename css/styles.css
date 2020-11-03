@@ -210,6 +210,8 @@ footer {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  /* position: fixed;
+  bottom: 0px; */
 }
 
 footer > img {
@@ -222,114 +224,60 @@ footer > p {
   font-size: 0.7rem;
 }
 
+@media (min-width: 1024px) {
+  main {
+    min-height: 900px;
+  }
+}
+
 /* nav */
 
-nav {
-  background-color: var(--black-color);
-  width: 100%;
-  height: 90px;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 10px 15px 10px;
-  align-items: center;
+.navbar-nav {
+  flex-direction: column;
+  align-items: flex-end;
 }
-.nav-logo {
-  width: 38%;
-  height: 70px;
+.bg-dark {
+  background-color: black !important;
 }
-
+.hamburger {
+  font-size: 3rem;
+}
 #video-store-logo {
-  width: 60%;
-  height: auto;
-}
-.nav-bar {
-  display: none;
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  top: 25%;
-  left: 73%;
-  z-index: 1;
+  width: 40%;
+  height: 10%;
 }
 
-.nav-bar li {
-  display: block;
-  padding: 10px 5px 10px 5px;
-  text-align: center;
-  background-color: var(--background-color);
-  border: 1px solid black;
-}
-.nav-bar li:last-child {
-  padding-right: 10px;
-}
-.nav-bar a {
-  color: var(--black-color);
-  height: 100px;
-}
-.nav-bar a:hover {
-  color: var(--white-color);
-}
-.hamburger-icon {
-  width: 40%;
-  margin-right: 10px;
-  position: relative;
-}
-.fa-film {
-  font-size: 4rem;
-  padding-right: 20px;
-  color: var(--white-color);
-  text-align: center;
-}
-hr {
+/* hr {
   border: none;
   border-bottom: 1px solid rgba(128, 128, 128, 0.646);
-  /* box-shadow: 0 15px 15px -0px #333; */
   box-shadow: 0 10px 10px -10px #8c8c8c inset;
   margin: 0px;
-  /* z-index: 2; */
-}
+} */
 
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto rgba(255, 255, 255, 0.1);
+}
 @media (min-width: 375px) {
-  .nav-bar {
-    left: 76%;
-  }
   .nav-logo {
     margin-bottom: 10px;
   }
-  #video-store-logo {
+  /* #video-store-logo {
     top: 50px;
     width: 55%;
     height: auto;
-  }
+  } */
 }
 
 @media (min-width: 425px) {
-  .nav-bar {
-    left: 79%;
-    top: 25%;
-  }
   .nav-logo {
     margin-bottom: 15px;
-  }
-
-  #video-store-logo {
-    width: 50%;
-    height: auto;
   }
 }
 
 @media (min-width: 768px) {
-  .nav-bar {
-    left: 88%;
-  }
-
   .nav-logo {
     margin-bottom: 20px;
-  }
-
-  #video-store-logo {
-    width: 30%;
-    height: auto;
   }
 }
 @media (min-width: 1024px) {
@@ -337,12 +285,11 @@ hr {
     margin-bottom: 20px;
   }
 
-  #video-store-logo {
-    width: 22%;
-    height: auto;
+  .navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
   }
 
-  .nav-bar {
+  /* .nav-bar {
     width: 600px;
     height: 70px;
     display: flex !important;
@@ -350,39 +297,17 @@ hr {
     top: 10px;
     justify-content: center;
     align-items: center;
-  }
-
-  .nav-bar li {
-    width: 200px;
-    padding: 10px 5px 10px 5px;
-    margin: 10px;
-    border-radius: 25px;
-    background-color: var(--background-color);
-  }
-  .nav-bar li:last-child {
-    padding-right: 10px;
-  }
-  .nav-bar a {
-    color: white;
-    display: inline;
-  }
-
-  .hamburger-icon {
-    width: 0;
-  }
-  .fa-film {
-    display: none;
-  }
+  } */
 
   @media (min-width: 1440px) {
     /* .nav-logo {
       margin-bottom: 20px;
     } */
 
-    #video-store-logo {
+    /* #video-store-logo {
       width: 15%;
       height: auto;
-    }
+    } */
 
     .nav-bar {
       width: 600px;
@@ -830,16 +755,17 @@ hr {
   border: 2px solid rgb(161, 62, 62);
   margin-bottom: 20px;
 }
-#all-stars{
+#all-stars {
   display: flex;
   justify-content: center;
   font-size: 1.6rem;
   padding-bottom: 20px;
   text-align: center;
+  color: white;
   /* position: absolute; */
   /* top: 500px; */
 }
-.stars-full{
+.stars-full {
   color: yellow;
 }
 
@@ -851,39 +777,28 @@ hr {
   .text-show {
     margin-left: 28px;
   }
-  .movie-card{
-    margin: 0;
+  .movie-card {
+    /* margin: 0; */
   }
 }
 
 @media (min-width: 425px) {
   .text-show {
     margin-left: 53px;
- 
+  }
 }
-
 @media (min-width: 768px) {
   #list-of-films {
     display: flex;
     flex-wrap: wrap;
-  }
-  .text-show {
-    /* margin-left: 224px; */
+    flex-direction: row;
+    justify-content: space-around;
   }
 
-  #section-two-movie-selector{
+  #section-two-movie-selector {
     display: flex;
     flex-wrap: wrap;
   }
-
-}
-
-@media (min-width: 1024px) {
-  .text-show {
-    /* margin-left: 224px; */
-  }
-
-
 }
 
 /* FAQ page */
@@ -911,9 +826,20 @@ hr {
   transition: 0.2s ease;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 1440px) {
   .questions {
-    width: 250px;
+    padding: 30px;
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    margin-bottom: 10px;
+  }
+  #section-two-faq {
+    padding: 20px;
+    /* height: 570px; */
+  }
+  footer {
+    padding: 40px;
   }
 }
 
@@ -971,25 +897,3 @@ hr {
     width: 350px;
   }
 }
-
-/* max-width: 1024 */
-/* @media (max-width: 1024) { */
-/* } */
-
-/* possibly for desktop */
-/* .nav-bar {
-    width: 70%;
-    height: 80px;
-    display: flex;
-  } */
-/* .nav-bar li {
-  display: inline;
-  padding: 10px 5px 10px 5px;
-}
-.nav-bar li:last-child {
-  padding-right: 10px;
-}
-.nav-bar a {
-  color: white;
-  height: 100px;
-} */

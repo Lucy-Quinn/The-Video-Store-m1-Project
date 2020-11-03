@@ -28,16 +28,14 @@ function movieSelector() {
 
                 stars.innerHTML = `
                 <section id="all-stars">
-                <div class="stars"><i class="fas fa-star"></i></div>
-                <div class="stars"><i class="fas fa-star"></i></div>
-                <div class="stars"><i class="fas fa-star"></i></div>
-                <div class="stars"><i class="fas fa-star"></i></div>
-                <div class="stars"><i class="fas fa-star"></i></div>
+                <i id="1" class="stars fas fa-star"></i>
+                <i id="2" class="stars fas fa-star"></i>
+                <i id="3" class="stars fas fa-star"></i>
+                <i id="4" class="stars fas fa-star"></i>
+                <i id="5" class="stars fas fa-star"></i>
                 </section>
+                       
                 `
-                // article.innerHTML = `
-                //     <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" />              
-                // `
                 overlay.innerHTML = `
                 <h2>${movie.title}</h2>
                 <p>${getGenre(movie.genre_ids)}</p>
@@ -82,12 +80,27 @@ function showMovieDetails() {
 }
 
 function changeStars(event) {
+    const targettedStar = event.target;
+    const starId = parseInt(targettedStar.id);
+    let starStringId = '';
+    console.log(targettedStar);
+    // let i = 1;
+    for (let i = 1; i <= starId; i++) {
+        starStringId = i;
+        let turnGold = document.getElementById(`${starStringId}`);
+        turnGold.style.color = 'gold';
+    }
 
-    const stars = event.target;
-    stars.querySelector('.stars')
-    console.log(stars);
-    // stars.setAttribute('class', 'stars')
-    stars.classList.toggle("stars-full")
+    for (let i = 5; i >= starId; i--) {
+        starStringId = i;
+        let turnGold = document.getElementById(`${starStringId}`);
+        console.log('turngold', turnGold);
+        turnGold.style.color = 'white';
+    }
+    // stars.querySelector('.stars')
+    // console.log(stars);
+    // // stars.setAttribute('class', 'stars')
+    // stars.classList.toggle("stars-full")
 
 }
 
