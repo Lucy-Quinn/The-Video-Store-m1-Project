@@ -154,6 +154,7 @@ body {
 main {
   width: 100%;
   height: 100%;
+
   /* background-color: rgb(199, 197, 197); */
 }
 h1 {
@@ -161,7 +162,9 @@ h1 {
   font-size: 4rem;
   font-weight: 700;
 }
-
+::placeholder {
+  font-size: 1.2rem;
+}
 a {
   text-decoration: none;
   color: var(--white-color);
@@ -179,10 +182,8 @@ a:hover {
   height: auto;
   padding: 20px 0px 20px 0px;
   text-align: center;
-  /* background-color: rgb(199, 197, 197); */
 }
 form {
-  /* background-color: rgb(199, 197, 197); */
   width: 100%;
   display: block;
 }
@@ -213,22 +214,19 @@ footer {
   /* position: fixed;
   bottom: 0px; */
 }
-
 footer > img {
   width: 35px;
 }
-
 footer > p {
   color: var(--white-color);
   padding: 5px 0px;
   font-size: 0.7rem;
 }
-
-@media (min-width: 1024px) {
-  main {
+/* @media (min-width: 1024px) { */
+  /* main {
     min-height: 900px;
-  }
-}
+  } */
+/* } */
 
 /* nav */
 
@@ -285,6 +283,10 @@ button:focus {
   .nav-logo {
     margin-bottom: 20px;
   }
+  main{
+    min-height: 900px;
+  }
+
 
   .navbar-expand-lg .navbar-collapse {
     justify-content: flex-end;
@@ -551,26 +553,11 @@ button:focus {
   /* overflow: scroll; */
 }
 
-/* .movie-card {
-  height: auto;
-  padding: 20px 0px 20px 0px;
-} */
-
-/* .movie-card.hide {
-  margin: 0;
-  height: 0;
-  width: 0;
-  /* max-width: 300px; */
-/* background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top;
-} */
 
 .movie-card {
   margin: 0 auto;
   height: 500px;
   width: 320px;
-  /* max-width: 300px; */
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
@@ -580,14 +567,7 @@ button:focus {
 .movie-container {
   position: relative;
 }
-/* .movie-card img {
-  width: 320px;
-  height: auto;
-} */
 
-/* .hidden {
-  display: none;
-} */
 .movie-card p {
   display: none;
   font-size: 1rem;
@@ -619,7 +599,6 @@ button:focus {
   margin: 0 auto;
   height: 490px;
   width: 320px;
-  /* border-radius: 50px; */
   border-radius: 10px;
   color: var(--white-color);
   top: 0px;
@@ -634,24 +613,17 @@ button:focus {
   padding-bottom: 20px;
   text-align: center;
   color: white;
-  /* position: absolute; */
-  /* top: 500px; */
 }
 .stars-full {
   color: yellow;
 }
 
-/* .text-overlay p {
-  display: block;
-} */
 
 @media (min-width: 375px) {
   .text-show {
     margin-left: 28px;
   }
-  .movie-card {
-    /* margin: 0; */
-  }
+
 }
 
 @media (min-width: 425px) {
@@ -665,13 +637,34 @@ button:focus {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+  border-radius: 10px;
+
   }
 
   #section-two-movie-selector {
     display: flex;
     flex-wrap: wrap;
   }
+
+  .text-show {
+    margin-left: 0px;
+  }
 }
+
+@media (min-width: 1024px) {
+  .movie-card{
+    height: 450px;
+  }
+  .text-show{
+    height: 500px;
+  }
+ #all-stars{
+    margin: 70px 0px 40px 0px;
+
+  }
+
+}
+
 
 /* FAQ page */
 
@@ -736,7 +729,7 @@ button:focus {
 
 /* signup page */
 .form-signup {
-  height: 400px;
+  height: 350px;
 }
 
 .btns {
@@ -751,6 +744,53 @@ button:focus {
   .sign-up-btn {
     padding: 20px;
   }
+  .form-signup {
+    height: 400px;
+  }
+  .form-signup input {
+    margin-bottom: 20px;
+    width: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    min-height: 900px;
+  }
+  .sign-up-btn {
+    padding: 40px;
+  }
+  .form-signup {
+    height: 350px;
+  }
+  .form-signup input {
+    margin-bottom: 30px;
+    padding: 15px;
+    width: 300px;
+  }
+  #section-one-signup {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  
+  .sign-up-btn {
+    padding: 60px;
+  }
+  .form-signup {
+    height: 350px;
+  }
+  .form-signup input {
+    margin-bottom: 30px;
+    padding: 15px;
+    width: 300px;
+  }
+  #section-one-signup {
+    margin-top: 40px;
+  }
+  .h1-styling h1{
+    padding: 30px;
+  }
 }
 
 /* login page  */
@@ -760,7 +800,6 @@ button:focus {
 }
 #popcorn-image {
   padding-bottom: 0;
-  /* background-color: rgb(199, 197, 197); */
   text-align: center;
 }
 #popcorn-image > img {
@@ -783,8 +822,36 @@ button:focus {
 }
 
 /* max-width: 768 */
+@media (min-width: 768px) {
+  #section-two-login input {
+    width: 250px;
+    height: auto;
+  }
+  #popcorn-image > img {
+    width: 20%;
+    height: auto;
+    padding: 20px 0px 20px 0px;
+  }
+}
+/* max-width: 1024 */
 @media (min-width: 1024px) {
   #section-two-login input {
-    width: 350px;
+    width: 300px;
   }
+  #popcorn-image > img {
+    width: 20%;
+    height: auto;
+    padding: 20px 0px 20px 0px;
+  }
+
+  @media (min-width: 1440px) {
+    #section-two-login input {
+      width: 300px;
+    }
+    #popcorn-image > img {
+      width: 20%;
+      height: auto;
+      padding: 20px 0px 20px 0px;
+    }
+
 }
