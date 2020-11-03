@@ -236,23 +236,29 @@ footer > p {
   flex-direction: column;
   align-items: flex-end;
 }
+#navbarNav a {
+  font-size: 1.8rem;
+  margin: 0px 5px 5px 0px;
+}
+
 .bg-dark {
   background-color: black !important;
 }
 .hamburger {
   font-size: 3rem;
+  color: var(--white-color);
 }
 #video-store-logo {
   width: 40%;
   height: 10%;
 }
 
-/* hr {
+hr {
   border: none;
   border-bottom: 1px solid rgba(128, 128, 128, 0.646);
   box-shadow: 0 10px 10px -10px #8c8c8c inset;
   margin: 0px;
-} */
+}
 
 button:focus {
   outline: 1px dotted;
@@ -262,11 +268,6 @@ button:focus {
   .nav-logo {
     margin-bottom: 10px;
   }
-  /* #video-store-logo {
-    top: 50px;
-    width: 55%;
-    height: auto;
-  } */
 }
 
 @media (min-width: 425px) {
@@ -288,36 +289,20 @@ button:focus {
   .navbar-expand-lg .navbar-collapse {
     justify-content: flex-end;
   }
-
-  /* .nav-bar {
+  #navbarNav a {
+    font-size: 1.8rem;
+    margin-right: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .nav-bar {
     width: 600px;
     height: 70px;
     display: flex !important;
-    left: 40%;
+    left: 56%;
     top: 10px;
     justify-content: center;
     align-items: center;
-  } */
-
-  @media (min-width: 1440px) {
-    /* .nav-logo {
-      margin-bottom: 20px;
-    } */
-
-    /* #video-store-logo {
-      width: 15%;
-      height: auto;
-    } */
-
-    .nav-bar {
-      width: 600px;
-      height: 70px;
-      display: flex !important;
-      left: 56%;
-      top: 10px;
-      justify-content: center;
-      align-items: center;
-    }
   }
 }
 
@@ -332,11 +317,10 @@ button:focus {
   background-position: center;
 }
 #enter-button {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  text-align: center;
+  padding-top: 50px;
   background-color: black;
+  color: var(--white-color);
 }
 .btn-secondary {
   width: 150px;
@@ -346,12 +330,12 @@ button:focus {
 .btn-enter a:hover,
 .btn-secondary a:hover {
   color: var(--white-color);
-  box-shadow: 0px 0px 100px 0px rgba(255, 165, 0, 1);
+  box-shadow: 0px 0px 50px 0px rgba(255, 165, 0, 1);
   transition: background-color 40s linear;
 }
 .btn-enter {
-  width: 170px;
-  height: 35px;
+  /* width: 170px;
+  height: 35px; */
   background-color: black;
   border: none;
 }
@@ -359,104 +343,64 @@ button:focus {
 #section-one-index {
   width: 100%;
   height: 250px;
-  /* background-color: rgb(199, 197, 197); */
   padding: 10px;
   display: flex;
 }
-#quotes {
+/* #quotes {
   position: relative;
   width: 100%;
   height: auto;
+} */
+
+#quotes {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
 }
-.quote-one,
-.quote-two,
-.quote-three,
-.quote-four,
-.quote-five,
-.quote-six,
-.quote-seven {
+.quote-wizard-oz,
+.hidden-quote-taken,
+.quote-forest-gump,
+.hidden-quote-shinning,
+.quote-jerry-maguire,
+.quote-lord-of-the-rings,
+.quote-dirty-dancing,
+.hidden-quote-spiderman {
   border-radius: 25px;
   border: 2px solid black;
   background-color: var(--white-color);
   padding: 10px;
-  font-size: 1.1rem;
-}
-/*Toto quote*/
-
-.quote-one {
-  position: absolute;
-  left: 190px;
-  top: 0px;
-  width: 100px;
-  height: 70px;
+  font-size: 1.2rem;
   text-align: center;
+  margin: 0px 5px;
 }
 
-/* E.T. */
-
-.quote-two {
-  position: absolute;
-  left: 190px;
-  top: 180px;
-  width: 100px;
+.hidden-quote-taken,
+.hidden-quote-shinning,
+.hidden-quote-spiderman {
+  display: none;
+}
+.quote-wizard-oz {
+  width: 140px;
+  height: 60px;
+}
+.quote-forest-gump {
+  height: 60px;
+  width: 300px;
+}
+.quote-jerry-maguire {
   height: 50px;
-  text-align: center;
-}
-
-/* Forest Gump */
-.quote-three {
-  position: absolute;
-  left: 5px;
-  top: 10px;
-  width: 130px;
-  height: 65px;
-  text-align: center;
-}
-
-/* Here's Jonny */
-
-.quote-four {
-  position: absolute;
-  left: 5px;
-  top: 100px;
   width: 100px;
-  height: 35px;
-  text-align: center;
 }
-
-/* Jerry Maguire */
-
-.quote-five {
-  position: absolute;
-  left: 190px;
-  top: 80px;
-  width: 100px;
-  height: 50px;
-  text-align: center;
-}
-
-/* Lord of the Rings*/
-
-.quote-six {
-  position: absolute;
-  left: 100px;
-  top: 130px;
-  width: 100px;
+.quote-lord-of-the-rings {
   height: 40px;
-  text-align: center;
-}
-
-/* Dirty Dancing */
-
-.quote-seven {
-  position: absolute;
-  left: 0px;
-  top: 160px;
   width: 100px;
-  height: 55px;
-  text-align: center;
 }
-
+.quote-dirty-dancing {
+  height: 55px;
+  width: 120px;
+  margin-left: 40px;
+}
 #section-two-index img {
   width: 100%;
   height: auto;
@@ -467,208 +411,136 @@ button:focus {
 }
 
 @media (min-width: 375px) {
-  /*Toto quote*/
-  .quote-one {
-    left: 230px;
+  .quote-wizard-oz {
+    margin-left: 50px;
   }
 
-  /* E.T. */
-  .quote-two {
-    left: 220px;
+  .quote-forest-gump {
+    height: 50px;
+    margin-top: 10px;
   }
 
-  /* Jerry Maguire */
-  .quote-five {
-    left: 250px;
-    top: 100px;
+  .quote-dirty-dancing {
+    margin-left: 100px;
+    height: 50px;
+  }
+  .quote-jerry-maguire {
+    margin-left: 130px;
+    margin-top: 10px;
   }
 
-  /* Lord of the Rings*/
-
-  .quote-six {
-    left: 120px;
-    top: 100px;
-  }
-
-  /* Dirty Dancing */
-
-  .quote-seven {
-    left: 50px;
+  .hidden-quote-shinning {
+    display: block;
+    margin: 10px 10px 0px 0px;
   }
 }
 
 @media (min-width: 425px) {
-  .quote-one,
-  .quote-two,
-  .quote-three,
-  .quote-four,
-  .quote-five,
-  .quote-six,
-  .quote-seven {
-    padding: 15px;
-    width: 150px;
-    height: auto;
-    font-size: 1.3rem;
+  .quote-wizard-oz {
+    margin-left: 120px;
   }
-  /*Toto quote*/
-  .quote-one {
-    left: 180px;
+  .quote-forest-gump {
+    margin-top: 10px;
   }
-
-  /* E.T. */
-  .quote-two {
-    left: 220px;
-  }
-  /* Forest Gump */
-  .quote-three {
-    top: 5px;
-  }
-
-  /* Here's Jonny */
-
-  .quote-four {
-    left: 0px;
-    width: 90px;
-  }
-
-  /* Jerry Maguire */
-  .quote-five {
-    left: 260px;
-  }
-
-  /* Lord of the Rings*/
-
-  .quote-six {
-    top: 110px;
-    left: 100px;
-  }
-
-  /* Dirty Dancing*/
-  .quote-seven {
-    left: 10px;
-    top: 170px;
+  .quote-jerry-maguire {
+    margin-left: 150px;
   }
 }
 
 @media (min-width: 768px) {
-  .quote-one,
-  .quote-two,
-  .quote-three,
-  .quote-four,
-  .quote-five,
-  .quote-six,
-  .quote-seven {
-    padding: 15px;
-    width: 150px;
-    height: auto;
-    font-size: 1.4rem;
+  .hidden-quote-taken {
+    display: block;
   }
-
-  /*Toto quote*/
-  .quote-one {
-    left: 550px;
-    width: 120px;
-    height: 90px;
+  .quote-wizard-oz {
+    margin-left: 70px;
+    margin-top: 20px;
   }
-
-  /* E.T. */
-  .quote-two {
-    left: 520px;
-    top: 120px;
+  .quote-forest-gump {
+    margin-bottom: 20px;
   }
-  /* Forest Gump */
-  .quote-three {
-    top: 5px;
-    width: 220px;
-    height: auto;
+  .hidden-quote-taken {
+    margin-left: 150px;
+    height: 100px;
+    width: 200px;
   }
-
-  /* Here's Jonny */
-
-  .quote-four {
-    left: 330px;
-    top: 120px;
+  .hidden-quote-shinning {
+    margin: 0px 0px 0px 60px;
+    height: 50px;
+    display: block;
   }
-
-  /* Jerry Maguire */
-  .quote-five {
-    left: 290px;
-    top: 10px;
-  }
-
-  /* Lord of the Rings*/
-
-  .quote-six {
-    top: 110px;
-    left: 100px;
-  }
-
-  /* Dirty Dancing*/
-  .quote-seven {
-    left: 10px;
-    top: 170px;
+  .hidden-quote-spiderman {
+    margin-left: 120px;
+    display: block;
   }
 }
 
 @media (min-width: 1024px) {
-  .quote-one,
-  .quote-two,
-  .quote-three,
-  .quote-four,
-  .quote-five,
-  .quote-six,
-  .quote-seven {
-    padding: 15px;
-    width: 150px;
-    height: auto;
-    font-size: 1.5rem;
+  #section-one-index {
+    height: 300px;
+  }
+  .quote-wizard-oz,
+  .hidden-quote-taken,
+  .quote-forest-gump,
+  .hidden-quote-shinning,
+  .quote-jerry-maguire,
+  .quote-lord-of-the-rings,
+  .quote-dirty-dancing,
+  .hidden-quote-spiderman {
+    padding: 20px;
+    font-size: 1.6rem;
   }
 
-  /*Toto quote*/
-  .quote-one {
-    left: 660px;
+  .hidden-quote-taken {
+    display: block;
+    width: 350px;
+    margin: 0px;
   }
-
-  /* E.T. */
-  .quote-two {
-    left: 800px;
-    top: 120px;
+  .hidden-quote-shinning {
+    display: block;
+    height: 60px;
+    margin-right: 20px;
   }
-  /* Forest Gump */
-  .quote-three {
-    top: 5px;
+  .hidden-quote-spiderman {
+    display: block;
+    width: 200px;
+    height: 90px;
+  }
+  .quote-wizard-oz {
+    width: 160px;
+    height: 100px;
+    margin-top: 0px;
+  }
+  .quote-forest-gump {
+    height: 110px;
     width: 220px;
-    height: auto;
   }
-
-  /* Here's Jonny */
-
-  .quote-four {
-    left: 440px;
-    top: 140px;
+  .quote-jerry-maguire {
+    height: 90px;
+    width: 100px;
+    margin: 0px;
   }
-
-  /* Jerry Maguire */
-  .quote-five {
-    left: 320px;
-    top: 10px;
+  .quote-lord-of-the-rings {
+    height: 80px;
+    width: 100px;
   }
-
-  /* Lord of the Rings*/
-
-  .quote-six {
-    top: 140px;
-    left: 180px;
+  .quote-dirty-dancing {
+    height: 100px;
+    width: 120px;
+    margin: 0px 0px 10px 70px;
+  }
+  #quotes {
+    margin-top: 20px;
+  }
+  #enter-button a {
+    font-size: 2.3rem;
   }
 }
 
 /* movie-selection page */
 #section-one-movie-selector {
-  /* background-color: rgb(199, 197, 197); */
   padding: 20px;
   display: flex;
   justify-content: center;
-  /* height: auto; */
 }
 #section-one-movie-selector > h1 {
   width: 270px;
@@ -818,12 +690,28 @@ button:focus {
   padding: 10px;
   text-align: center;
 }
+#section-two-faq a {
+  color: black;
+  font-size: 1.6rem;
+}
 .answer-after {
   display: none;
 }
 .questions:hover {
   box-shadow: 0px 0px 100px 0px rgba(255, 165, 0, 1);
   transition: 0.2s ease;
+}
+.answer {
+  font-weight: 700;
+  display: block;
+  margin: 0;
+}
+
+@media (max-width: 1440px) {
+  .questions {
+    margin-bottom: 40px;
+    padding: 30px;
+  }
 }
 
 @media (max-width: 1440px) {
@@ -832,7 +720,7 @@ button:focus {
     width: 100%;
     height: auto;
     border: 1px solid black;
-    margin-bottom: 10px;
+    margin-bottom: 45px;
   }
   #section-two-faq {
     padding: 20px;
@@ -841,11 +729,14 @@ button:focus {
   footer {
     padding: 40px;
   }
+  #section-one-faq > h1 {
+    margin: 30px 0px 20px 0px;
+  }
 }
 
 /* signup page */
 .form-signup {
-  height: 350px;
+  height: 400px;
 }
 
 .btns {

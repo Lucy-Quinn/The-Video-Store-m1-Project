@@ -4,7 +4,7 @@
 
 ## Description
 
-Are you a film buff and you need some inspiration? 🎬 Looking for that film that makes your hairs stand on ends or gives you butterflies in your stomach? 🦋 The Video Store will provide you with a selection of those most popular movies. You can rate the movies or simply just browse for ideas... 💡
+Are you a film buff and you need some inspiration? 🎬 Looking for that film that makes your hairs stand on ends or gives you butterflies in your stomach? 🦋 The Video Store will provide you with a selection of those most popular movies. You can rent, rate the movies or simply just browse for ideas... 💡
 
 
 

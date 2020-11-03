@@ -14,15 +14,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 //FAQ => toggling answer
 
 function toggleAnswer() {
