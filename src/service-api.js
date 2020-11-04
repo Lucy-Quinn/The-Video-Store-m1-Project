@@ -16,15 +16,28 @@ function movieSelector() {
                 const article = document.createElement('article');
                 const overlay = document.createElement('article');
                 const movieContainer = document.createElement('div');
-                const stars = document.createElement('div')
+                const stars = document.createElement('div');
+                const rentFilm = document.createElement('div');
+                const successRented = document.createElement('div');
+                const heart = document.createElement('div');
+
 
                 //set class attributes
                 article.setAttribute('class', 'movie-card');
                 movieContainer.setAttribute('class', 'movie-container');
                 overlay.setAttribute('class', 'text-overlay');
+                rentFilm.setAttribute('class', 'rent-film');
 
                 //amending html/styling
                 article.style.backgroundImage = `url('https://image.tmdb.org/t/p/w500${movie.poster_path}')`;
+
+                rentFilm.innerHTML = `
+                <button>Rent Movie</button>
+                `
+                successRented.innerHTML = `
+                    <p class="success-rented">Enjoy your movie!</p>
+                    <br>
+                `
 
                 stars.innerHTML = `
                 <section id="all-stars">
@@ -38,22 +51,39 @@ function movieSelector() {
                 `
                 overlay.innerHTML = `
                 <h2>${movie.title}</h2>
-                <p>${getGenre(movie.genre_ids)}</p>
-                <p>${movie.overview}</p>
-                <p>${movie.vote_average}</p>
+                <br>
+                <p class="genre">${getGenre(movie.genre_ids)}</p>
+                <br>
+                <p class"plot">${movie.overview}</p>
+                <br>
+                <p class="rating">Offical rating: ${movie.vote_average} <i class="stars-full fas fa-star"></i></p>
+                <br>
                 `
 
+                heart.innerHTML = `
+                <i class="fas fa-heart"></i>
+                
+                `
                 //append elements to
                 movieContainer.appendChild(article)
                 movieContainer.appendChild(overlay)
-                movieContainer.appendChild(stars)
+                movieContainer.appendChild(rentFilm)
+                // movieContainer.appendChild(stars)
+                // movieContainer.appendChild(heart)
+                rentFilm.appendChild(heart)
 
                 //append movieContainer to list-of-films
                 const filmId = document.getElementById('list-of-films');
                 filmId.appendChild(movieContainer)
                 movieContainer.addEventListener('click', showMovieDetails)
 
-                stars.addEventListener('click', changeStars);
+                // Click 'Rent Movie' to show success message
+                rentFilm.addEventListener('click', function () {
+                    rentFilm.appendChild(successRented)
+                })
+                // stars.addEventListener('click', changeStars);
+                heart.addEventListener('click', heartClick);
+
             })
 
             console.log('data', data);
@@ -70,21 +100,32 @@ function showMovieDetails() {
     // overlay.setAttribute('class', 'text-show');
 
     overlay.classList.toggle('text-show');
-    movieCard.classList.toggle('hide'); // comment out => may need it?
+    // movieCard.classList.toggle('hide'); // comment out => may need it?
 
 
-    console.log(overlay);
     // this.classList.toggle('text-show')
 
     // this.classList.toggle("hide");
 }
+
+
+function heartClick() {
+    const heart = document.querySelector('.fa-heart');
+    console.log(heart);
+
+    heart.classList.toggle('heart-full')
+
+}
+
+
+// const heart = document.querySelector('.fa-heart');
+// heart.addEventListener('click', heartClick);
 
 function changeStars(event) {
     const targettedStar = event.target;
     const starId = parseInt(targettedStar.id);
     let starStringId = '';
     console.log(targettedStar);
-    // let i = 1;
     for (let i = 1; i <= starId; i++) {
         starStringId = i;
         let turnGold = document.getElementById(`${starStringId}`);

@@ -9,7 +9,8 @@ class Signup {
         this.repeatPasswordInput = document.querySelector('#repeat-password');
 
         this.buttonInput = document.querySelector('#signup-button');
-        this.errorsWrapper = document.querySelector('.message-container');
+        this.errorsWrapper = document.querySelector('#error-messages');
+        this.successMessage = document.querySelector('#success-messages');
     };
 
     handleEmailInput = (event) => {
@@ -47,7 +48,9 @@ class Signup {
     };
 
     setErrorMessages = () => {
+
         this.errorsWrapper.innerHTML = '';
+        this.errorsWrapper.classList = '';
         const errorsObj = validator.getErrors();
 
         const errorStringsArray = Object.values(errorsObj);
@@ -55,6 +58,7 @@ class Signup {
         errorStringsArray.forEach((str) => {
             const p = document.createElement('p');
             p.textContent = str;
+            this.errorsWrapper.classList = 'message-container';
             this.errorsWrapper.appendChild(p);
         })
     };
@@ -68,12 +72,20 @@ class Signup {
 
         const newUser = new User(name, movieQuote, email, password);
 
+        const p = document.createElement('p');
+        p.textContent = 'Thank you for signing up!'
+        this.successMessage.classList = "success-container"
+        this.successMessage.appendChild(p)
+
+
         database.saveNewUser(newUser);
+
 
         this.nameInput.value = '';
         this.movieQuoteInput.value = '';
         this.emailInput.value = '';
         this.passwordInput.value = '';
+
         this.redirect();
     };
 

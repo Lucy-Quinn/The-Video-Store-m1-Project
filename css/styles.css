@@ -139,6 +139,7 @@ table {
   --background-color: rgb(199, 197, 197);
   --white-color: #fff;
   --black-color: black;
+  --golden-color: rgba(255, 165, 0, 1);
 }
 
 /* basic styling */
@@ -211,8 +212,6 @@ footer {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  /* position: fixed;
-  bottom: 0px; */
 }
 footer > img {
   width: 35px;
@@ -222,14 +221,14 @@ footer > p {
   padding: 5px 0px;
   font-size: 0.7rem;
 }
-/* @media (min-width: 1024px) { */
-  /* main {
-    min-height: 900px;
-  } */
-/* } */
-
-/* nav */
-
+.nav-link a:hover {
+  /* text-decoration: underline; */
+  font-weight: 700;
+}
+.navbar-nav a:hover {
+  /* text-decoration: underline; */
+  font-weight: 700;
+}
 .navbar-nav {
   flex-direction: column;
   align-items: flex-end;
@@ -259,7 +258,6 @@ hr {
 }
 
 button:focus {
-  outline: 1px dotted;
   outline: 5px auto rgba(255, 255, 255, 0.1);
 }
 @media (min-width: 375px) {
@@ -278,16 +276,17 @@ button:focus {
   .nav-logo {
     margin-bottom: 20px;
   }
+  .hamburger {
+    font-size: 3.3rem;
+  }
 }
 @media (min-width: 1024px) {
   .nav-logo {
     margin-bottom: 20px;
   }
-  main{
+  main {
     min-height: 900px;
   }
-
-
   .navbar-expand-lg .navbar-collapse {
     justify-content: flex-end;
   }
@@ -321,7 +320,7 @@ button:focus {
 #enter-button {
   text-align: center;
   padding-top: 50px;
-  background-color: black;
+  background-color: var(--black-color);
   color: var(--white-color);
 }
 .btn-secondary {
@@ -332,13 +331,11 @@ button:focus {
 .btn-enter a:hover,
 .btn-secondary a:hover {
   color: var(--white-color);
-  box-shadow: 0px 0px 50px 0px rgba(255, 165, 0, 1);
+  box-shadow: 0px 0px 50px 0px var(--golden-color);
   transition: background-color 40s linear;
 }
 .btn-enter {
-  /* width: 170px;
-  height: 35px; */
-  background-color: black;
+  background-color: var(--black-color);
   border: none;
 }
 
@@ -348,11 +345,6 @@ button:focus {
   padding: 10px;
   display: flex;
 }
-/* #quotes {
-  position: relative;
-  width: 100%;
-  height: auto;
-} */
 
 #quotes {
   display: flex;
@@ -369,7 +361,7 @@ button:focus {
 .quote-dirty-dancing,
 .hidden-quote-spiderman {
   border-radius: 25px;
-  border: 2px solid black;
+  border: 2px solid var(--black-color);
   background-color: var(--white-color);
   padding: 10px;
   font-size: 1.2rem;
@@ -553,7 +545,6 @@ button:focus {
   /* overflow: scroll; */
 }
 
-
 .movie-card {
   margin: 0 auto;
   height: 500px;
@@ -585,9 +576,18 @@ button:focus {
 
 .text-overlay p {
   text-align: justify;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 25px;
 }
+/* .genre {
+  font-size: 1rem;
+}
+.plot {
+  font-size: 3rem;
+}
+.rating {
+  font-size: 1rem;
+} */
 
 .text-show p {
   display: block;
@@ -603,9 +603,56 @@ button:focus {
   color: var(--white-color);
   top: 0px;
   background-color: var(--black-color);
-  border: 2px solid rgb(161, 62, 62);
+  border: 2px solid rgb(223, 12, 12);
   margin-bottom: 20px;
+  box-shadow: 0px 0px 10px 0px rgb(241, 8, 8);
 }
+.rent-film {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+}
+.rent-film button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  padding: 20px;
+  font-size: 1.1rem;
+  color: var(--white-color);
+  border: 2px solid rgb(161, 62, 62);
+  border-radius: 6px;
+  background-color: var(--black-color);
+  margin-left: 35px;
+  /* margin-right: 10px; */
+}
+
+.rent-film button:hover {
+  background-color: rgba(243, 21, 21, 0.89);
+  border: 2px solid rgb(161, 62, 62);
+  font-weight: 700;
+  color: var(--white-color);
+  width: 120px;
+  font-size: 1.4rem;
+}
+
+.success-rented {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  background-color: var(--golden-color);
+  margin: 10px 0px 20px 0px;
+  font-size: 1.3rem;
+  box-shadow: 0 50px 100px var(--golden-color);
+  border-radius: 5px;
+}
+
 #all-stars {
   display: flex;
   justify-content: center;
@@ -618,12 +665,18 @@ button:focus {
   color: yellow;
 }
 
+.fa-heart {
+  font-size: 2.5rem;
+}
+.heart-full {
+  color: red;
+  padding-left: 120px;
+}
 
 @media (min-width: 375px) {
   .text-show {
     margin-left: 28px;
   }
-
 }
 
 @media (min-width: 425px) {
@@ -637,8 +690,7 @@ button:focus {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-  border-radius: 10px;
-
+    border-radius: 10px;
   }
 
   #section-two-movie-selector {
@@ -652,19 +704,16 @@ button:focus {
 }
 
 @media (min-width: 1024px) {
-  .movie-card{
+  .movie-card {
     height: 450px;
   }
-  .text-show{
+  .text-show {
     height: 500px;
   }
- #all-stars{
+  #all-stars {
     margin: 70px 0px 40px 0px;
-
   }
-
 }
-
 
 /* FAQ page */
 
@@ -691,7 +740,7 @@ button:focus {
   display: none;
 }
 .questions:hover {
-  box-shadow: 0px 0px 100px 0px rgba(255, 165, 0, 1);
+  box-shadow: 0px 0px 100px 0px var(--golden-color);
   transition: 0.2s ease;
 }
 .answer {
@@ -712,7 +761,7 @@ button:focus {
     padding: 30px;
     width: 100%;
     height: auto;
-    border: 1px solid black;
+    border: 1px solid var(--black-color);
     margin-bottom: 45px;
   }
   #section-two-faq {
@@ -773,7 +822,6 @@ button:focus {
   }
 }
 @media (min-width: 1440px) {
-  
   .sign-up-btn {
     padding: 60px;
   }
@@ -788,7 +836,7 @@ button:focus {
   #section-one-signup {
     margin-top: 40px;
   }
-  .h1-styling h1{
+  .h1-styling h1 {
     padding: 30px;
   }
 }
@@ -811,9 +859,34 @@ button:focus {
   height: 200px;
 }
 
-.message-container p.correct-message {
-  background-color: gold;
+.message-container {
+  background-color: rgba(243, 21, 21, 0.89);
   box-shadow: 0 0 30px rgb(48, 41, 4);
+  /* width: 200px; */
+  color: var(--white-color);
+  margin: 0px 20px 10px 20px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  line-height: 15px;
+  font-size: 1.2rem;
+}
+
+.success-container {
+  background-color: var(--golden-color);
+  box-shadow: 0 0 30px var(--golden-color);
+  height: 50px;
+  text-align: center;
+  color: var(--white-color);
+  margin: 0px 20px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  line-height: 15px;
+  font-size: 1.2rem;
 }
 
 .message-container p.incorrect-message {
@@ -853,5 +926,5 @@ button:focus {
       height: auto;
       padding: 20px 0px 20px 0px;
     }
-
+  }
 }
