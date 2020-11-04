@@ -1,19 +1,3 @@
-
-// // Hamburger menu
-// function dropDownMenu() {
-//     const navBar = document.querySelector(".nav-bar");
-//     if (navBar.style.display === "none") {
-//         navBar.style.display = "block";
-//     } else {
-//         navBar.style.display = "none";
-//     }
-// }
-
-// const hamburgerIcon = document.getElementById("hamburger-icon");
-// hamburgerIcon.addEventListener('click', dropDownMenu)
-
-
-
 //FAQ => toggling answer
 
 function toggleAnswer() {
