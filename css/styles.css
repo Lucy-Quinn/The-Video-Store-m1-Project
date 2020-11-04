@@ -279,6 +279,10 @@ button:focus {
   .hamburger {
     font-size: 3.3rem;
   }
+  #section-one-movie-select h1 {
+    width: 400px;
+    height: 200px;
+  }
 }
 @media (min-width: 1024px) {
   .nav-logo {
@@ -546,9 +550,7 @@ button:focus {
   display: flex;
   justify-content: center;
 }
-#section-one-movie-selector > h1 {
-  width: 270px;
-}
+
 #list-of-films {
   display: flex;
   flex-direction: column;
@@ -805,6 +807,7 @@ button:focus {
     padding: 20px;
     /* height: 570px; */
   }
+
   footer {
     padding: 40px;
   }
@@ -857,6 +860,9 @@ button:focus {
   #section-one-signup {
     margin-top: 20px;
   }
+  .h1-styling h1 {
+    padding: 40px;
+  }
 }
 @media (min-width: 1440px) {
   .sign-up-btn {
@@ -872,9 +878,6 @@ button:focus {
   }
   #section-one-signup {
     margin-top: 40px;
-  }
-  .h1-styling h1 {
-    padding: 30px;
   }
 }
 

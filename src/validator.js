@@ -30,23 +30,23 @@ class Validator {
         return emailIsValid;
     };
 
-    validateUniqueEmail = (email) => {
+    validateUniqueEmail = (newEmail) => {
         const users = database.getAllUsers();
         let emailUnique = true;
 
-        if (users.length > 0) {
-            users.forEach((userObj) => {
-                if (userObj.email === email) {
-                    emailUnique = false;
-                }
-            })
-
-            if (emailUnique) {
-                delete this.errors.emailExistsError;
-            } else {
-                this.errors.emailExistsError = this.emailExistsError;
+        // if (users.length > 0) {
+        users.forEach((userObj) => {
+            if (userObj.email === newEmail) {
+                emailUnique = false;
             }
+        })
+
+        if (emailUnique) {
+            delete this.errors.emailExistsError;
+        } else {
+            this.errors.emailExistsError = this.emailExistsError;
         }
+        // }
 
     };
 
