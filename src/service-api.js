@@ -9,7 +9,9 @@ function movieSelector() {
         })
         .then((data) => {
 
+
             const moviesArray = data.results
+            console.log(data.results);
             moviesArray.forEach((movie) => {
 
                 //create elements
@@ -19,7 +21,7 @@ function movieSelector() {
                 const stars = document.createElement('div');
                 const rentFilm = document.createElement('div');
                 const successRented = document.createElement('div');
-                const heart = document.createElement('div');
+                // const heart = document.createElement('div');
 
 
                 //set class attributes
@@ -33,11 +35,17 @@ function movieSelector() {
 
                 rentFilm.innerHTML = `
                 <button>Rent Movie</button>
+                 <i class="fas fa-heart"></i>
+
                 `
                 successRented.innerHTML = `
                     <p class="success-rented">Enjoy your movie!</p>
                     <br>
                 `
+                // heart.innerHTML = `
+                // <i class="fas fa-heart"></i>
+
+                // `
 
                 stars.innerHTML = `
                 <section id="all-stars">
@@ -60,29 +68,69 @@ function movieSelector() {
                 <br>
                 `
 
-                heart.innerHTML = `
-                <i class="fas fa-heart"></i>
-                
-                `
+
                 //append elements to
                 movieContainer.appendChild(article)
                 movieContainer.appendChild(overlay)
                 movieContainer.appendChild(rentFilm)
-                // movieContainer.appendChild(stars)
-                // movieContainer.appendChild(heart)
-                rentFilm.appendChild(heart)
+                movieContainer.appendChild(stars)
+
+                // rentFilm.appendChild(heart)
 
                 //append movieContainer to list-of-films
                 const filmId = document.getElementById('list-of-films');
                 filmId.appendChild(movieContainer)
-                movieContainer.addEventListener('click', showMovieDetails)
+                // const articles = document.querySelectorAll('.movie-card')
+                // const overlays = document.querySelectorAll('.text-overlay')
+
+                // const article = document.querySelector('.movie-card');
+                // const overlay = document.querySelector('.text-overlay')
+
+                // article.forEach((article) => {
+                article.addEventListener('click', function () {
+                    overlay.classList.toggle('text-show');
+
+                })
+                // })
+                // overlays.forEach((overlay) => {
+                overlay.addEventListener('click', function () {
+                    overlay.classList.toggle('text-show');
+
+                })
+                // })
+
 
                 // Click 'Rent Movie' to show success message
                 rentFilm.addEventListener('click', function () {
                     rentFilm.appendChild(successRented)
                 })
-                // stars.addEventListener('click', changeStars);
-                heart.addEventListener('click', heartClick);
+                stars.addEventListener('click', function (event) {
+                    // function changeStars(event) {
+                    const targettedStar = event.target;
+                    const starId = parseInt(targettedStar.id);
+                    let starStringId = '';
+                    console.log(targettedStar);
+                    for (let i = 1; i < starId; i++) {
+                        starStringId = i;
+                        let turnGold = document.getElementById(`${starStringId}`);
+                        turnGold.style.color = 'gold';
+                    }
+                    for (let i = 5; i > starId; i--) {
+                        starStringId = i;
+                        let turnGold = document.getElementById(`${starStringId}`);
+                        console.log('turngold', turnGold);
+                        turnGold.style.color = 'white';
+                    }
+                    // stars.querySelector('.stars')
+                    // console.log(stars);
+                    // // stars.setAttribute('class', 'stars')
+                    // stars.classList.toggle("stars-full")
+
+
+                });
+
+                const hearts = movieContainer.querySelectorAll('.fa-heart')
+                hearts.forEach((heart) => { heart.addEventListener('click', heartClick) });
 
             })
 
@@ -92,28 +140,39 @@ function movieSelector() {
 movieSelector();
 
 
-function showMovieDetails() {
+// function showMovieDetails() {
 
-    const overlay = this.querySelector('.text-overlay')
-    const movieCard = this.querySelector('.movie-card');
-    // console.log(movieCard);
-    // overlay.setAttribute('class', 'text-show');
+// const overlay = document.querySelector('.text-overlay')
+// console.log(this);
+// const movieCard = document.querySelector('.movie-card');
+// console.log(movieCard);
+// overlay.setAttribute('class', 'text-show');
 
-    overlay.classList.toggle('text-show');
-    // movieCard.classList.toggle('hide'); // comment out => may need it?
-
-
-    // this.classList.toggle('text-show')
-
-    // this.classList.toggle("hide");
-}
+// overlay.classList.toggle('text-show');
+// movieCard.classList.toggle('hide'); // comment out => may need it?
 
 
-function heartClick() {
-    const heart = document.querySelector('.fa-heart');
-    console.log(heart);
+// this.classList.toggle('text-show')
 
-    heart.classList.toggle('heart-full')
+// this.classList.toggle("hide");
+// }
+
+
+function heartClick(event) {
+    const click = event.target
+    // const heart = this.querySelector('.fa-heart');
+    // heartArr.forEach((heart) => {
+    click.classList.toggle('heart-full')
+
+    // })
+
+
+
+
+    // const questions = document.querySelectorAll('.questions')
+    // questions.forEach((question) => {
+    //     question.addEventListener('click', toggleAnswer)
+    // })
 
 }
 
