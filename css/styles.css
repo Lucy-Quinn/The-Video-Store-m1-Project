@@ -338,6 +338,9 @@ button:focus {
   background-color: var(--black-color);
   border: none;
 }
+.btn-enter a h3:hover {
+  font-size: 2.3rem;
+}
 
 #section-one-index {
   width: 100%;
@@ -439,6 +442,10 @@ button:focus {
   .quote-jerry-maguire {
     margin-left: 150px;
   }
+  .btn-enter a h2:hover {
+    font-size: 2.5rem;
+    width: 400px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -465,6 +472,9 @@ button:focus {
   .hidden-quote-spiderman {
     margin-left: 120px;
     display: block;
+  }
+  .btn-enter a h3:hover {
+    font-size: 4rem;
   }
 }
 
@@ -525,10 +535,10 @@ button:focus {
   #quotes {
     margin-top: 20px;
   }
-  #enter-button a {
-    font-size: 2.3rem;
-  }
 }
+/* @media (min-width: 1440px) {
+
+} */
 
 /* movie-selection page */
 #section-one-movie-selector {
@@ -614,6 +624,7 @@ button:focus {
   text-align: center;
   width: 200px;
   margin: 0 auto;
+  margin-bottom: 10px;
 }
 .rent-film button {
   display: flex;
@@ -628,7 +639,6 @@ button:focus {
   border-radius: 6px;
   background-color: var(--black-color);
   margin-left: 35px;
-  /* margin-right: 10px; */
 }
 
 .rent-film button:hover {
@@ -667,10 +677,26 @@ button:focus {
 
 .fa-heart {
   font-size: 2.5rem;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
 }
 .heart-full {
   color: red;
   margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+#top-page {
+  padding: 20px;
+  text-align: center;
+}
+#top-page > a {
+  font-size: 1.9rem;
+  color: black;
+}
+#top-page > a:visited {
+  color: black;
 }
 
 @media (min-width: 375px) {
@@ -682,6 +708,10 @@ button:focus {
 @media (min-width: 425px) {
   .text-show {
     margin-left: 53px;
+  }
+  .rent-film button {
+    font-size: 1.3rem;
+    width: 120px;
   }
 }
 @media (min-width: 768px) {
@@ -708,10 +738,17 @@ button:focus {
     height: 450px;
   }
   .text-show {
-    height: 500px;
+    height: 450px;
   }
-  #all-stars {
-    margin: 70px 0px 40px 0px;
+  .rent-film button {
+    font-size: 1.3rem;
+    width: 120px;
+    margin-top: 10px;
+  }
+
+  .text-overlay p {
+    font-size: 1.5rem;
+    line-height: 20px;
   }
 }
 
