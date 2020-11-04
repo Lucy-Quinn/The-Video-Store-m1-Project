@@ -4,7 +4,7 @@ class Login {
     constructor() {
         this.emailInput = document.querySelector('#email');
         this.passwordInput = document.querySelector('#password');
-        this.messageContainer = document.querySelector('.message-container');
+        this.messageContainer = document.querySelector('.message-container-login');
         this.loginButton = document.querySelector('#login-button');
     }
 
