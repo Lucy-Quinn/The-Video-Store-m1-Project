@@ -42,10 +42,7 @@ function movieSelector() {
                     <p class="success-rented">Enjoy your movie!</p>
                     <br>
                 `
-                // heart.innerHTML = `
-                // <i class="fas fa-heart"></i>
 
-                // `
 
                 stars.innerHTML = `
                 <section id="all-stars">
@@ -75,7 +72,6 @@ function movieSelector() {
                 movieContainer.appendChild(rentFilm)
                 movieContainer.appendChild(stars)
 
-                // rentFilm.appendChild(heart)
 
                 //append movieContainer to list-of-films
                 const filmId = document.getElementById('list-of-films');
@@ -91,21 +87,18 @@ function movieSelector() {
                     overlay.classList.toggle('text-show');
 
                 })
-                // })
-                // overlays.forEach((overlay) => {
                 overlay.addEventListener('click', function () {
                     overlay.classList.toggle('text-show');
 
                 })
-                // })
 
 
                 // Click 'Rent Movie' to show success message
                 rentFilm.addEventListener('click', function () {
                     rentFilm.appendChild(successRented)
                 })
+
                 stars.addEventListener('click', function (event) {
-                    // function changeStars(event) {
                     const targettedStar = event.target;
                     const starId = parseInt(targettedStar.id);
                     let starStringId = '';
@@ -125,61 +118,23 @@ function movieSelector() {
                     // console.log(stars);
                     // // stars.setAttribute('class', 'stars')
                     // stars.classList.toggle("stars-full")
-
-
                 });
 
                 const hearts = movieContainer.querySelectorAll('.fa-heart')
                 hearts.forEach((heart) => { heart.addEventListener('click', heartClick) });
-
             })
-
-            console.log('data', data);
+            // console.log('data', data);
         })
 }
 movieSelector();
 
-
-// function showMovieDetails() {
-
-// const overlay = document.querySelector('.text-overlay')
-// console.log(this);
-// const movieCard = document.querySelector('.movie-card');
-// console.log(movieCard);
-// overlay.setAttribute('class', 'text-show');
-
-// overlay.classList.toggle('text-show');
-// movieCard.classList.toggle('hide'); // comment out => may need it?
-
-
-// this.classList.toggle('text-show')
-
-// this.classList.toggle("hide");
-// }
-
-
+//Heart function
 function heartClick(event) {
     const click = event.target
-    // const heart = this.querySelector('.fa-heart');
-    // heartArr.forEach((heart) => {
     click.classList.toggle('heart-full')
-
-    // })
-
-
-
-
-    // const questions = document.querySelectorAll('.questions')
-    // questions.forEach((question) => {
-    //     question.addEventListener('click', toggleAnswer)
-    // })
-
 }
 
-
-// const heart = document.querySelector('.fa-heart');
-// heart.addEventListener('click', heartClick);
-
+//Stars function
 function changeStars(event) {
     const targettedStar = event.target;
     const starId = parseInt(targettedStar.id);
@@ -204,22 +159,8 @@ function changeStars(event) {
 
 }
 
-
+//Get genre function
 function getGenre(genreArr) {
-    // const genreStr = String(genre);
-    // const romance = '10749';
-    // const drama = '35'
-    // const comedy = '18'
-    // const action = '28'
-    // const crime = '80'
-    // const animation = '16'
-    // const history = '36'
-    // const war = '10752'
-    // const thriller = '53'
-    // const adventure = '12'
-    // const music = '10402'
-    // const fantasy = '14'
-    // const family = '10751'
     let finalGenre = ''
     genreArr.forEach((genre) => {
         switch (genre) {
@@ -268,7 +209,6 @@ function getGenre(genreArr) {
         }
     })
     return finalGenre.slice(0, -2)
-
 }
 
 
