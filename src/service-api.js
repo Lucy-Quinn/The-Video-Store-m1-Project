@@ -97,7 +97,7 @@ function movieSelector() {
                             rentFilm.removeChild(successRented)
 
                             button.style.backgroundColor = 'red';
-                        }, 2000);
+                        }, 1500);
                         button.innerHTML = 'Movie Rented'
                     })
                 })

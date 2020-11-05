@@ -362,7 +362,8 @@ button:focus {
 }
 #enter-button {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 80px;
+
   background-color: var(--black-color);
   color: var(--white-color);
 }
@@ -406,7 +407,9 @@ button:focus {
 .quote-lord-of-the-rings,
 .quote-dirty-dancing,
 .hidden-quote-spiderman,
-.hidden-quote-gone-with-the-wind {
+.hidden-quote-gone-with-the-wind,
+.hidden-quote-godfather,
+.hidden-quote-jaws {
   border-radius: 25px;
   border: 2px solid var(--black-color);
   background-color: var(--white-color);
@@ -418,7 +421,9 @@ button:focus {
 
 .hidden-quote-taken,
 .hidden-quote-shinning,
-.hidden-quote-spiderman {
+.hidden-quote-spiderman,
+.hidden-quote-godfather,
+.hidden-quote-jaws {
   display: none;
 }
 .quote-wizard-oz {
@@ -492,9 +497,6 @@ button:focus {
 }
 
 @media (min-width: 768px) {
-  #section-one-index {
-    margin: 10px;
-  }
   .hidden-quote-taken {
     display: block;
   }
@@ -522,38 +524,32 @@ button:focus {
 }
 
 @media (min-width: 1024px) {
+  #header-image {
+    height: 800px;
+  }
   #section-one-index {
-    height: 300px;
+    height: 500px;
+  }
+  #enter-button {
+    padding-top: 150px;
   }
   .btn-enter a h3:hover {
     font-size: 3.5rem;
   }
-  .quote-wizard-oz,
-  .hidden-quote-taken,
-  .quote-forest-gump,
-  .hidden-quote-shinning,
-  .quote-jerry-maguire,
-  .quote-lord-of-the-rings,
-  .quote-dirty-dancing,
-  .hidden-quote-spiderman {
-    padding: 20px;
-    font-size: 1.6rem;
-  }
-
   .hidden-quote-taken {
     display: block;
     width: 350px;
-    margin: 0px;
+    height: 150px;
   }
   .hidden-quote-shinning {
     display: block;
-    height: 60px;
-    margin-right: 20px;
+    height: 90px;
+    margin-right: 30px;
   }
   .hidden-quote-spiderman {
     display: block;
     width: 200px;
-    height: 90px;
+    height: 115px;
   }
   .quote-wizard-oz {
     width: 160px;
@@ -561,25 +557,44 @@ button:focus {
     margin-top: 0px;
   }
   .quote-forest-gump {
-    height: 110px;
-    width: 220px;
+    height: 150px;
+    width: 230px;
   }
   .quote-jerry-maguire {
-    height: 90px;
-    width: 100px;
+    height: 100px;
+    width: 150px;
     margin: 0px;
   }
   .quote-lord-of-the-rings {
-    height: 80px;
-    width: 100px;
+    height: 100px;
+    width: 150px;
+  }
+  .quote-wizard-oz {
+    width: 230px;
+    height: 120px;
   }
   .quote-dirty-dancing {
+    height: 150px;
+    width: 150px;
+  }
+  .hidden-quote-godfather {
+    display: block;
     height: 100px;
-    width: 120px;
-    margin: 0px 0px 10px 70px;
+    width: 250px;
+    margin-left: 40px;
+  }
+  .hidden-quote-jaws {
+    display: block;
+    height: 100px;
+    width: 200px;
+    margin-left: 20px;
   }
   #quotes {
     margin-top: 20px;
+  }
+  #quotes p {
+    font-size: 2rem;
+    padding: 20px;
   }
 }
 @media (min-width: 1440px) {
@@ -588,6 +603,10 @@ button:focus {
   }
   #quotes {
     justify-content: space-around;
+    align-items: center;
+  }
+  #section-two-index {
+    margin-top: 0px;
   }
   .hidden-quote-gone-with-the-wind {
     display: bold;
@@ -596,12 +615,12 @@ button:focus {
     height: 100px;
   }
   .quote-dirty-dancing {
-    margin: 0px 0px 10px 80px;
+    height: 120px;
+    width: 150px;
   }
   .quote-jerry-maguire {
-    height: 90px;
-    width: 100px;
-    margin-right: 80px;
+    height: 100px;
+    width: 150px;
   }
   .hidden-quote-taken {
     display: block;
@@ -610,6 +629,9 @@ button:focus {
   }
   .quote-forest-gump {
     margin-left: 120px;
+  }
+  .hidden-quote-jaws {
+    display: none;
   }
 }
 
@@ -693,7 +715,7 @@ button:focus {
   width: 100px;
   height: 50px;
   padding: 20px;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: var(--white-color);
   border: 2px solid rgb(161, 62, 62);
   border-radius: 6px;
@@ -702,12 +724,10 @@ button:focus {
 }
 
 .rent-film button:hover {
-  /* background-color: rgba(243, 21, 21, 0.89); */
   border: 2px solid rgb(161, 62, 62);
   font-weight: 700;
   color: var(--white-color);
   width: 120px;
-  font-size: 1.4rem;
 }
 
 .success-rented {
@@ -1001,6 +1021,7 @@ button:focus {
   .form-signup {
     height: 503px;
     width: 385px;
+    margin: 0px 20px 0px 0px;
   }
   .form-signup input {
     margin-bottom: 30px;
@@ -1031,11 +1052,10 @@ button:focus {
   #pulp-fiction {
     width: 45%;
     height: auto;
-    align-self: center;
     align-items: center;
     justify-content: flex-end;
     margin-left: 20px;
-    margin: 0px, 20px, 20px, 20px;
+    margin: 0px, 20px, 80px, 20px;
   }
 
   #pulp-fiction > img {
@@ -1049,6 +1069,7 @@ button:focus {
   }
   .form-signup {
     height: 350px;
+    width: 600px;
   }
   input {
     width: 400px;
@@ -1156,8 +1177,9 @@ button:focus {
 }
 
 @media (min-width: 375px) {
-  .incorrect-message {
-    width: 70%;
+  .incorrect-message,
+  .correct-message {
+    width: 80%;
   }
 }
 

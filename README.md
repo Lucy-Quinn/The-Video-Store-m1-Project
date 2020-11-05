@@ -10,11 +10,11 @@ Are you a film buff and you need some inspiration? 🎬 Looking for that film th
 
 ## MVP (Minimum Viable Product)
 
-- **Homepage** => it will include all the links to navigate around the app and the 'Enter' button which will direct the user to the 'Film Selection' page.
-- **Film Selection** => this page will include the selection of movies. Offering the user the chance to browse, favourite and rent movies and feel inspired. 
+- **Homepage** => It will include all the links to navigate around the app and the 'Enter' button which will direct the user to the 'Movie Selector' page.
+- **Movie Selector** => This page will include the selection of movies. Offering the user the chance to browse, favourite and rent movies and feel inspired. 
 - **FAQ** => Everything you would like to know about the Video Store.
 - **Sign Up** => A registration for new users, with both email and password validation.
-- **Login** => A form for signed up users with email and password validation.
+- **Login** => A form to login for signed up users with email and password validation.
 
 ## Backlog
 
@@ -26,7 +26,9 @@ Are you a film buff and you need some inspiration? 🎬 Looking for that film th
 
 ## Wireframes
 
-[Wireframes](https://www.figma.com/file/RStAiIeFMpl2eAKoACSoQi/Movies?node-id=11%3A4)
+[My Wireframe](https://www.figma.com/file/RStAiIeFMpl2eAKoACSoQi/Movies?node-id=11%3A4)
+
+[Navigation / User Flow]()
 
 ## Data Structure
 
