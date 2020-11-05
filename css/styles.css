@@ -924,6 +924,41 @@ button:focus {
   align-items: center;
 }
 
+.form-signup input {
+  width: 200px;
+}
+#error-messages,
+#success-messages {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.message-container {
+  background-color: rgba(243, 21, 21, 0.89);
+  box-shadow: 0 0 30px rgb(48, 41, 4);
+  color: var(--white-color);
+  width: 80%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  line-height: 15px;
+  font-size: 1.4rem;
+}
+.success-container {
+  background-color: var(--golden-color);
+  box-shadow: 0 0 30px var(--golden-color);
+  height: 50px;
+  text-align: center;
+  color: var(--white-color);
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
 @media (min-width: 425px) {
   .form-signup {
     margin-bottom: 20px;
@@ -964,7 +999,7 @@ button:focus {
     padding: 40px;
   }
   .form-signup {
-    height: 350px;
+    height: 503px;
     width: 385px;
   }
   .form-signup input {
@@ -984,6 +1019,13 @@ button:focus {
     justify-content: space-around;
     align-items: center;
   }
+  .message-container {
+    line-height: 2.2rem;
+  }
+
+  /* #error-messages {
+    display: none;
+  } */
 }
 @media (min-width: 1440px) {
   #pulp-fiction {
@@ -1019,6 +1061,13 @@ button:focus {
   }
   #section-one-signup {
     margin-top: 40px;
+  }
+  .message-container {
+    line-height: 2.2rem;
+  }
+  #error-messages {
+    height: 127px;
+    width: 400px;
   }
 }
 
@@ -1082,7 +1131,6 @@ button:focus {
   height: 200px;
 }
 
-.message-container,
 .incorrect-message {
   background-color: rgba(243, 21, 21, 0.89);
   box-shadow: 0 0 30px rgb(48, 41, 4);
@@ -1098,7 +1146,6 @@ button:focus {
   font-size: 1.2rem;
 }
 
-.success-container,
 .correct-message {
   background-color: var(--golden-color);
   box-shadow: 0 0 30px var(--golden-color);
@@ -1136,14 +1183,14 @@ button:focus {
     height: auto;
     padding: 20px 0px 20px 0px;
   }
-  .message-container,
+  /* .message-container, */
   .incorrect-message {
     margin: 0px auto 10px auto;
   }
   .form-signup {
     height: 500px;
   }
-  .success-container,
+  /* .success-container, */
   .correct-message {
     margin: 0px auto 10px auto;
   }
@@ -1159,7 +1206,7 @@ button:focus {
     padding: 20px 0px 20px 0px;
   }
 
-  .message-container,
+  /* .message-container, */
   .incorrect-message {
     line-height: 2.2rem;
     height: 100px;

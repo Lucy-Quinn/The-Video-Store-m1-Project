@@ -76,6 +76,7 @@ class Signup {
         p.textContent = 'Thank you for signing up!'
         this.successMessage.classList = "success-container"
         this.successMessage.appendChild(p)
+        this.errorsWrapper.style.display = 'none';
 
 
         db.saveNewUser(newUser);
