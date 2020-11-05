@@ -163,8 +163,20 @@ h1 {
   font-size: 4rem;
   font-weight: 700;
 }
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1.6rem;
+}
 ::placeholder {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+}
+input {
+  font-size: 1.3rem;
 }
 a {
   text-decoration: none;
@@ -219,14 +231,12 @@ footer > img {
 footer > p {
   color: var(--white-color);
   padding: 5px 0px;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 }
 .nav-link a:hover {
-  /* text-decoration: underline; */
   font-weight: 700;
 }
 .navbar-nav a:hover {
-  /* text-decoration: underline; */
   font-weight: 700;
 }
 .navbar-nav {
@@ -270,6 +280,13 @@ button:focus {
   .nav-logo {
     margin-bottom: 15px;
   }
+
+  ::placeholder {
+    font-size: 1.5rem;
+  }
+  input {
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -289,18 +306,23 @@ button:focus {
     margin-bottom: 20px;
   }
   main {
-    min-height: 900px;
+    min-height: 870px;
   }
   .navbar-expand-lg .navbar-collapse {
     justify-content: flex-end;
   }
   #navbarNav a {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-right: 30px;
   }
-
+  h3 {
+    font-size: 3rem;
+  }
   footer {
     height: 80px;
+  }
+  footer p {
+    font-size: 1.2rem;
   }
 }
 @media (min-width: 1440px) {
@@ -320,6 +342,10 @@ button:focus {
     min-height: 1020px;
   }
   p {
+    font-size: 2.2rem;
+  }
+
+  #navbarNav a {
     font-size: 2.2rem;
   }
 }
@@ -356,7 +382,7 @@ button:focus {
   border: none;
 }
 .btn-enter a h3:hover {
-  font-size: 2.3rem;
+  font-size: 3rem;
 }
 
 #section-one-index {
@@ -463,10 +489,6 @@ button:focus {
   .quote-jerry-maguire {
     margin-left: 150px;
   }
-  .btn-enter a h2:hover {
-    font-size: 2.5rem;
-    width: 400px;
-  }
 }
 
 @media (min-width: 768px) {
@@ -497,14 +519,14 @@ button:focus {
     margin-left: 120px;
     display: block;
   }
-  .btn-enter a h3:hover {
-    font-size: 4rem;
-  }
 }
 
 @media (min-width: 1024px) {
   #section-one-index {
     height: 300px;
+  }
+  .btn-enter a h3:hover {
+    font-size: 3.5rem;
   }
   .quote-wizard-oz,
   .hidden-quote-taken,
@@ -561,6 +583,9 @@ button:focus {
   }
 }
 @media (min-width: 1440px) {
+  .btn-enter a h3:hover {
+    font-size: 4rem;
+  }
   #quotes {
     justify-content: space-around;
   }
@@ -617,7 +642,6 @@ button:focus {
 
 .movie-card p {
   display: none;
-  font-size: 1rem;
 }
 
 .text-overlay {
@@ -625,25 +649,15 @@ button:focus {
   padding: 15px;
 }
 .text-overlay h2 {
-  font-size: 3rem;
   text-align: center;
   padding: 10px;
 }
 
 .text-overlay p {
   text-align: justify;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 25px;
 }
-/* .genre {
-  font-size: 1rem;
-}
-.plot {
-  font-size: 3rem;
-}
-.rating {
-  font-size: 1rem;
-} */
 
 .text-show p {
   display: block;
@@ -819,6 +833,10 @@ button:focus {
   color: black;
   font-size: 1.6rem;
 }
+#section-two-faq a:hover {
+  color: var(--white-color);
+  font-size: 1.8rem;
+}
 .answer-after {
   display: none;
 }
@@ -855,10 +873,21 @@ button:focus {
   #section-one-faq > h1 {
     margin: 5px 0px 5px 0px;
   }
+  #section-two-faq p,
+  #section-two-faq a {
+    font-size: 1.8rem;
+  }
+  #section-two-faq a:hover {
+    font-size: 2rem;
+  }
 }
 @media (min-width: 1440px) {
-  #section-two-faq p {
-    font-size: 2.2rem;
+  #section-two-faq p,
+  #section-two-faq a {
+    font-size: 2.3rem;
+  }
+  #section-two-faq a:hover {
+    font-size: 2.6rem;
   }
   #section-two-faq {
     margin-left: 30px;
@@ -878,8 +907,34 @@ button:focus {
   justify-content: center;
   align-items: center;
 }
+#pulp-fiction {
+  margin: 0px, 20px, 20px, 20px;
+  width: 80%;
+  height: auto;
+}
+#pulp-fiction > img {
+  width: 100%;
+  height: auto;
+}
+
+#section-two-signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (min-width: 425px) {
+  .form-signup {
+    margin-bottom: 20px;
+  }
+}
 
 @media (min-width: 768px) {
+  #pulp-fiction {
+    width: 60%;
+    height: auto;
+  }
   .sign-up-btn {
     padding: 20px;
   }
@@ -893,11 +948,24 @@ button:focus {
 }
 
 @media (min-width: 1024px) {
+  #pulp-fiction {
+    width: 50%;
+    height: auto;
+    align-self: center;
+    justify-content: flex-end;
+    margin-left: 20px;
+  }
+
+  #pulp-fiction > img {
+    width: 80%;
+    height: auto;
+  }
   .sign-up-btn {
     padding: 40px;
   }
   .form-signup {
     height: 350px;
+    width: 385px;
   }
   .form-signup input {
     margin-bottom: 30px;
@@ -910,13 +978,39 @@ button:focus {
   .h1-styling h1 {
     padding: 40px;
   }
+  #section-two-signup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 @media (min-width: 1440px) {
+  #pulp-fiction {
+    width: 45%;
+    height: auto;
+    align-self: center;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 20px;
+    margin: 0px, 20px, 20px, 20px;
+  }
+
+  #pulp-fiction > img {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: auto;
+  }
   .sign-up-btn {
     padding: 60px;
   }
   .form-signup {
     height: 350px;
+  }
+  input {
+    width: 400px;
+    padding: 20px;
   }
   .form-signup input {
     margin-bottom: 30px;
@@ -937,10 +1031,52 @@ button:focus {
   padding-bottom: 0;
   text-align: center;
 }
+
 #popcorn-image > img {
   width: 30%;
   height: auto;
   padding: 20px 0px 20px 0px;
+}
+
+#popcorn-image > img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
 .form-login {
   height: 200px;
@@ -952,6 +1088,7 @@ button:focus {
   box-shadow: 0 0 30px rgb(48, 41, 4);
   color: var(--white-color);
   margin: 0px 20px 10px 20px;
+  width: 80%;
   height: 70px;
   display: flex;
   flex-direction: column;
@@ -969,6 +1106,7 @@ button:focus {
   text-align: center;
   color: var(--white-color);
   margin: 0px 20px 10px 20px;
+  width: 80%;
   display: flex;
   justify-content: center;
   /* flex-direction: column; */
@@ -998,15 +1136,33 @@ button:focus {
     height: auto;
     padding: 20px 0px 20px 0px;
   }
+  .message-container,
+  .incorrect-message {
+    margin: 0px auto 10px auto;
+  }
+  .form-signup {
+    height: 500px;
+  }
+  .success-container,
+  .correct-message {
+    margin: 0px auto 10px auto;
+  }
+}
 
-  @media (min-width: 1440px) {
-    #section-two-login input {
-      width: 300px;
-    }
-    #popcorn-image > img {
-      width: 20%;
-      height: auto;
-      padding: 20px 0px 20px 0px;
-    }
+@media (min-width: 1440px) {
+  #section-two-login input {
+    width: 300px;
+  }
+  #popcorn-image > img {
+    width: 20%;
+    height: auto;
+    padding: 20px 0px 20px 0px;
+  }
+
+  .message-container,
+  .incorrect-message {
+    line-height: 2.2rem;
+    height: 100px;
+    padding: 20px;
   }
 }

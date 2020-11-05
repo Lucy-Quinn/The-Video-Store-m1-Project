@@ -15,10 +15,9 @@ function movieSelector() {
                 const article = document.createElement('article');
                 const overlay = document.createElement('article');
                 const movieContainer = document.createElement('div');
-                const stars = document.createElement('div');
+                // const stars = document.createElement('div');
                 const rentFilm = document.createElement('div');
                 const successRented = document.createElement('div');
-                // const heart = document.createElement('div');
 
 
                 //set class attributes
@@ -41,16 +40,15 @@ function movieSelector() {
                 `
 
 
-                stars.innerHTML = `
-                <section id="all-stars">
-                <i id="1" class="stars fas fa-star"></i>
-                <i id="2" class="stars fas fa-star"></i>
-                <i id="3" class="stars fas fa-star"></i>
-                <i id="4" class="stars fas fa-star"></i>
-                <i id="5" class="stars fas fa-star"></i>
-                </section>
-                       
-                `
+                // stars.innerHTML = `
+                // <section id="all-stars">
+                // <i id="1" class="stars fas fa-star"></i>
+                // <i id="2" class="stars fas fa-star"></i>
+                // <i id="3" class="stars fas fa-star"></i>
+                // <i id="4" class="stars fas fa-star"></i>
+                // <i id="5" class="stars fas fa-star"></i>
+                // </section> 
+                // `
                 overlay.innerHTML = `
                 <h2>${movie.title}</h2>
                 <br>
@@ -67,7 +65,7 @@ function movieSelector() {
                 movieContainer.appendChild(article)
                 movieContainer.appendChild(overlay)
                 movieContainer.appendChild(rentFilm)
-                movieContainer.appendChild(stars)
+                // movieContainer.appendChild(stars)
 
 
                 //append movieContainer to list-of-films
@@ -95,27 +93,27 @@ function movieSelector() {
                     rentFilm.appendChild(successRented)
                 })
 
-                stars.addEventListener('click', function (event) {
-                    const targettedStar = event.target;
-                    const starId = parseInt(targettedStar.id);
-                    let starStringId = '';
-                    console.log(targettedStar);
-                    for (let i = 1; i < starId; i++) {
-                        starStringId = i;
-                        let turnGold = document.getElementById(`${starStringId}`);
-                        turnGold.style.color = 'gold';
-                    }
-                    for (let i = 5; i > starId; i--) {
-                        starStringId = i;
-                        let turnGold = document.getElementById(`${starStringId}`);
-                        console.log('turngold', turnGold);
-                        turnGold.style.color = 'white';
-                    }
-                    // stars.querySelector('.stars')
-                    // console.log(stars);
-                    // // stars.setAttribute('class', 'stars')
-                    // stars.classList.toggle("stars-full")
-                });
+                // stars.addEventListener('click', function (event) {
+                //     const targettedStar = event.target;
+                //     const starId = parseInt(targettedStar.id);
+                //     let starStringId = '';
+                //     console.log(targettedStar);
+                //     for (let i = 1; i < starId; i++) {
+                //         starStringId = i;
+                //         let turnGold = document.getElementById(`${starStringId}`);
+                //         turnGold.style.color = 'gold';
+                //     }
+                //     for (let i = 5; i > starId; i--) {
+                //         starStringId = i;
+                //         let turnGold = document.getElementById(`${starStringId}`);
+                //         console.log('turngold', turnGold);
+                //         turnGold.style.color = 'white';
+                //     }
+                //     // stars.querySelector('.stars')
+                //     // console.log(stars);
+                //     // // stars.setAttribute('class', 'stars')
+                //     // stars.classList.toggle("stars-full")
+                // });
 
                 const hearts = movieContainer.querySelectorAll('.fa-heart')
                 hearts.forEach((heart) => { heart.addEventListener('click', heartClick) });
