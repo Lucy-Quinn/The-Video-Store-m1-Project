@@ -298,6 +298,10 @@ button:focus {
     font-size: 1.8rem;
     margin-right: 30px;
   }
+
+  footer {
+    height: 80px;
+  }
 }
 @media (min-width: 1440px) {
   .nav-bar {
@@ -308,6 +312,15 @@ button:focus {
     top: 10px;
     justify-content: center;
     align-items: center;
+  }
+  footer {
+    padding: 40px;
+  }
+  main {
+    min-height: 1020px;
+  }
+  p {
+    font-size: 2.2rem;
   }
 }
 
@@ -366,7 +379,8 @@ button:focus {
 .quote-jerry-maguire,
 .quote-lord-of-the-rings,
 .quote-dirty-dancing,
-.hidden-quote-spiderman {
+.hidden-quote-spiderman,
+.hidden-quote-gone-with-the-wind {
   border-radius: 25px;
   border: 2px solid var(--black-color);
   background-color: var(--white-color);
@@ -401,6 +415,9 @@ button:focus {
   height: 55px;
   width: 120px;
   margin-left: 40px;
+}
+.hidden-quote-gone-with-the-wind {
+  display: none;
 }
 #section-two-index img {
   width: 100%;
@@ -453,6 +470,9 @@ button:focus {
 }
 
 @media (min-width: 768px) {
+  #section-one-index {
+    margin: 10px;
+  }
   .hidden-quote-taken {
     display: block;
   }
@@ -540,9 +560,33 @@ button:focus {
     margin-top: 20px;
   }
 }
-/* @media (min-width: 1440px) {
-
-} */
+@media (min-width: 1440px) {
+  #quotes {
+    justify-content: space-around;
+  }
+  .hidden-quote-gone-with-the-wind {
+    display: bold;
+    font-size: 1.6rem;
+    width: 140px;
+    height: 100px;
+  }
+  .quote-dirty-dancing {
+    margin: 0px 0px 10px 80px;
+  }
+  .quote-jerry-maguire {
+    height: 90px;
+    width: 100px;
+    margin-right: 80px;
+  }
+  .hidden-quote-taken {
+    display: block;
+    width: 350px;
+    margin-left: 120px;
+  }
+  .quote-forest-gump {
+    margin-left: 120px;
+  }
+}
 
 /* movie-selection page */
 #section-one-movie-selector {
@@ -788,14 +832,14 @@ button:focus {
   margin: 0;
 }
 
-@media (max-width: 1440px) {
+/* @media (min-width: 1440px) {
   .questions {
     margin-bottom: 40px;
     padding: 30px;
   }
-}
+} */
 
-@media (max-width: 1440px) {
+@media (min-width: 1024px) {
   .questions {
     padding: 30px;
     width: 100%;
@@ -805,14 +849,20 @@ button:focus {
   }
   #section-two-faq {
     padding: 20px;
-    /* height: 570px; */
+    margin-bottom: 60px;
   }
 
-  footer {
-    padding: 40px;
-  }
   #section-one-faq > h1 {
-    margin: 30px 0px 20px 0px;
+    margin: 5px 0px 5px 0px;
+  }
+}
+@media (min-width: 1440px) {
+  #section-two-faq p {
+    font-size: 2.2rem;
+  }
+  #section-two-faq {
+    margin-left: 30px;
+    margin-right: 30px;
   }
 }
 
@@ -843,9 +893,6 @@ button:focus {
 }
 
 @media (min-width: 1024px) {
-  main {
-    min-height: 900px;
-  }
   .sign-up-btn {
     padding: 40px;
   }
@@ -931,7 +978,6 @@ button:focus {
   font-size: 1.2rem;
 }
 
-/* max-width: 768 */
 @media (min-width: 768px) {
   #section-two-login input {
     width: 250px;
@@ -943,7 +989,6 @@ button:focus {
     padding: 20px 0px 20px 0px;
   }
 }
-/* max-width: 1024 */
 @media (min-width: 1024px) {
   #section-two-login input {
     width: 300px;

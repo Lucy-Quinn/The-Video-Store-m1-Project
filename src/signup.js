@@ -78,7 +78,7 @@ class Signup {
         this.successMessage.appendChild(p)
 
 
-        database.saveNewUser(newUser);
+        db.saveNewUser(newUser);
 
 
         this.nameInput.value = '';

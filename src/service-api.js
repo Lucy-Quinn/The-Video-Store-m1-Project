@@ -1,7 +1,4 @@
-
-
 function movieSelector() {
-
     fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=d0d72ad03cd6e6a02d49e71b43050670')
         .then((response) => {
             console.log('response', response);

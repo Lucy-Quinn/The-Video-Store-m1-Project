@@ -13,9 +13,9 @@ class Login {
         const email = this.emailInput.value;
         const password = this.passwordInput.value;
 
-        const users = database.getAllUsers();
+        const users = db.getAllUsers();
 
-        const user = users.find((userObj) => {
+        const user = users.find(function (userObj) {
             if (userObj.email === email && userObj.password === password) {
                 return true
             }
@@ -39,7 +39,7 @@ class Login {
 
 
     redirect = () => {
-        setTimeout(() => {
+        setTimeout(function () {
             location.assign('./index.html')
         }, 2000);
     }

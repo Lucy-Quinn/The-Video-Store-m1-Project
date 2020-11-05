@@ -1,4 +1,3 @@
-'use strict'
 
 class User {
     constructor(name, movieQuote, email, password) {

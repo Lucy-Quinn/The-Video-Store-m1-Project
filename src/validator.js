@@ -1,5 +1,3 @@
-'use strict';
-
 class Validator {
     constructor() {
         this.invalidEmailError = 'Enter a valid email address.';
@@ -23,30 +21,30 @@ class Validator {
     };
 
     emailSyntaxValid = (email) => {
-        const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+        const emailRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
 
-        const emailIsValid = emailRegex.test(email);
+        const emailIsValid = emailRegEx.test(email);
 
         return emailIsValid;
     };
 
     validateUniqueEmail = (newEmail) => {
-        const users = database.getAllUsers();
+        const users = db.getAllUsers();
         let emailUnique = true;
 
-        if (users.length > 0) {
-            users.forEach((userObj) => {
-                if (userObj.email === newEmail) {
-                    emailUnique = false;
-                }
-            })
-
-            if (emailUnique) {
-                delete this.errors.emailExistsError;
-            } else {
-                this.errors.emailExistsError = this.emailExistsError;
+        // if (users.length > 0) {
+        users.forEach((userObj) => {
+            if (userObj.email === newEmail) {
+                emailUnique = false;
             }
+        })
+
+        if (emailUnique) {
+            delete this.errors.emailExistsError;
+        } else {
+            this.errors.emailExistsError = this.emailExistsError;
         }
+        // }
 
     };
 
