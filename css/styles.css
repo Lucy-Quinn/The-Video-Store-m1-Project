@@ -702,7 +702,7 @@ button:focus {
 }
 
 .rent-film button:hover {
-  background-color: rgba(243, 21, 21, 0.89);
+  /* background-color: rgba(243, 21, 21, 0.89); */
   border: 2px solid rgb(161, 62, 62);
   font-weight: 700;
   color: var(--white-color);
