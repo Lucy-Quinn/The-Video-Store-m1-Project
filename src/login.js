@@ -1,4 +1,3 @@
-
 class Login {
     constructor() {
         this.emailInput = document.querySelector('#email');
@@ -9,7 +8,6 @@ class Login {
 
     handleSubmit = (event) => {
         event.preventDefault();
-
         const email = this.emailInput.value;
         const password = this.passwordInput.value;
 
@@ -20,10 +18,8 @@ class Login {
                 return true
             }
         });
-
         this.messageContainer.innerHTML = '';
         const p = document.createElement('p');
-
         if (!user) {
             p.textContent = 'Email or password are incorrect!';
             p.classList.add('incorrect-message');
@@ -32,9 +28,7 @@ class Login {
             p.classList.add('correct-message');
             this.redirect();
         }
-
         this.messageContainer.appendChild(p);
-
     }
 
 

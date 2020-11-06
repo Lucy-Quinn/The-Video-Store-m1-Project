@@ -142,7 +142,7 @@ table {
   --golden-color: rgba(255, 165, 0, 1);
 }
 
-/* basic styling */
+/********** General styling *********/
 
 html {
   font-size: 10px;
@@ -155,8 +155,6 @@ body {
 main {
   width: 100%;
   height: 100%;
-
-  /* background-color: rgb(199, 197, 197); */
 }
 h1 {
   color: var(--black-color);
@@ -215,7 +213,6 @@ input {
 input[type="password"] {
   margin-bottom: 10px;
 }
-
 footer {
   width: 100%;
   height: 50px;
@@ -247,7 +244,6 @@ footer > p {
   font-size: 1.8rem;
   margin: 0px 5px 5px 0px;
 }
-
 .bg-dark {
   background-color: black !important;
 }
@@ -259,17 +255,16 @@ footer > p {
   width: 40%;
   height: 10%;
 }
-
 hr {
   border: none;
   border-bottom: 1px solid rgba(128, 128, 128, 0.646);
   box-shadow: 0 10px 10px -10px #8c8c8c inset;
   margin: 0px;
 }
-
 button:focus {
   outline: 5px auto rgba(255, 255, 255, 0.1);
 }
+
 @media (min-width: 375px) {
   .nav-logo {
     margin-bottom: 10px;
@@ -280,7 +275,6 @@ button:focus {
   .nav-logo {
     margin-bottom: 15px;
   }
-
   ::placeholder {
     font-size: 1.5rem;
   }
@@ -350,7 +344,7 @@ button:focus {
   }
 }
 
-/* Index page */
+/********** Index page **************/
 #header-image {
   margin: 0 auto;
   width: 100%;
@@ -459,16 +453,16 @@ button:focus {
   display: flex;
 }
 
+/********** Index page => Media Queries **************/
+
 @media (min-width: 375px) {
   .quote-wizard-oz {
     margin-left: 50px;
   }
-
   .quote-forest-gump {
     height: 50px;
     margin-top: 10px;
   }
-
   .quote-dirty-dancing {
     margin-left: 100px;
     height: 50px;
@@ -635,19 +629,16 @@ button:focus {
   }
 }
 
-/* movie-selection page */
+/********** Movie-selector page ************/
 #section-one-movie-selector {
   padding: 20px;
   display: flex;
   justify-content: center;
 }
-
 #list-of-films {
   display: flex;
   flex-direction: column;
-  /* overflow: scroll; */
 }
-
 .movie-card {
   margin: 0 auto;
   height: 500px;
@@ -657,15 +648,16 @@ button:focus {
   background-position: top;
   border-radius: 10px;
 }
-
+.movie-card:hover {
+  transition: 1.5s ease;
+  height: 480px;
+}
 .movie-container {
   position: relative;
 }
-
 .movie-card p {
   display: none;
 }
-
 .text-overlay {
   display: none;
   padding: 15px;
@@ -674,17 +666,14 @@ button:focus {
   text-align: center;
   padding: 10px;
 }
-
 .text-overlay p {
   text-align: justify;
   font-size: 1.3rem;
   line-height: 25px;
 }
-
 .text-show p {
   display: block;
 }
-
 .text-show {
   display: block;
   position: absolute;
@@ -722,14 +711,12 @@ button:focus {
   background-color: var(--black-color);
   margin-left: 35px;
 }
-
 .rent-film button:hover {
   border: 2px solid rgb(161, 62, 62);
   font-weight: 700;
   color: var(--white-color);
   width: 120px;
 }
-
 .success-rented {
   display: flex;
   align-items: center;
@@ -742,7 +729,6 @@ button:focus {
   box-shadow: 0 50px 100px var(--golden-color);
   border-radius: 5px;
 }
-
 #all-stars {
   display: flex;
   justify-content: center;
@@ -754,16 +740,18 @@ button:focus {
 .stars-full {
   color: yellow;
 }
-
 .fa-heart {
   font-size: 2.5rem;
   margin-left: 10px;
+  margin-top: 10px;
   display: flex;
   align-items: center;
 }
 .heart-full {
   color: red;
   margin-left: 10px;
+  margin-top: 10px;
+
   display: flex;
   align-items: center;
 }
@@ -778,6 +766,8 @@ button:focus {
 #top-page > a:visited {
   color: black;
 }
+
+/********** Movie-selector page => media-queries ************/
 
 @media (min-width: 375px) {
   .text-show {
@@ -794,6 +784,7 @@ button:focus {
     width: 120px;
   }
 }
+
 @media (min-width: 768px) {
   #list-of-films {
     display: flex;
@@ -802,12 +793,10 @@ button:focus {
     justify-content: space-around;
     border-radius: 10px;
   }
-
   #section-two-movie-selector {
     display: flex;
     flex-wrap: wrap;
   }
-
   .text-show {
     margin-left: 0px;
   }
@@ -825,14 +814,13 @@ button:focus {
     width: 120px;
     margin-top: 10px;
   }
-
   .text-overlay p {
     font-size: 1.5rem;
     line-height: 20px;
   }
 }
 
-/* FAQ page */
+/************ FAQ page ******************/
 
 .questions {
   padding: 15px;
@@ -870,12 +858,7 @@ button:focus {
   margin: 0;
 }
 
-/* @media (min-width: 1440px) {
-  .questions {
-    margin-bottom: 40px;
-    padding: 30px;
-  }
-} */
+/************ FAQ page => media queries ******************/
 
 @media (min-width: 1024px) {
   .questions {
@@ -901,6 +884,7 @@ button:focus {
     font-size: 2rem;
   }
 }
+
 @media (min-width: 1440px) {
   #section-two-faq p,
   #section-two-faq a {
@@ -915,11 +899,10 @@ button:focus {
   }
 }
 
-/* signup page */
+/******** Signup page ***************/
 .form-signup {
   height: 350px;
 }
-
 .btns {
   margin: 15px 0px;
   padding: 20px;
@@ -936,14 +919,12 @@ button:focus {
   width: 100%;
   height: auto;
 }
-
 #section-two-signup {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
-
 .form-signup input {
   width: 200px;
 }
@@ -979,6 +960,8 @@ button:focus {
   font-size: 1.2rem;
 }
 
+/******** Signup page => media queries ***************/
+
 @media (min-width: 425px) {
   .form-signup {
     margin-bottom: 20px;
@@ -1010,7 +993,6 @@ button:focus {
     justify-content: flex-end;
     margin-left: 20px;
   }
-
   #pulp-fiction > img {
     width: 80%;
     height: auto;
@@ -1043,11 +1025,8 @@ button:focus {
   .message-container {
     line-height: 2.2rem;
   }
-
-  /* #error-messages {
-    display: none;
-  } */
 }
+
 @media (min-width: 1440px) {
   #pulp-fiction {
     width: 45%;
@@ -1057,7 +1036,6 @@ button:focus {
     margin-left: 20px;
     margin: 0px, 20px, 80px, 20px;
   }
-
   #pulp-fiction > img {
     display: flex;
     justify-content: center;
@@ -1092,7 +1070,8 @@ button:focus {
   }
 }
 
-/* login page  */
+/************ Login page  *************/
+
 #section-two-login {
   width: 100%;
   height: auto;
@@ -1101,18 +1080,15 @@ button:focus {
   padding-bottom: 0;
   text-align: center;
 }
-
 #popcorn-image > img {
   width: 30%;
   height: auto;
   padding: 20px 0px 20px 0px;
 }
-
 #popcorn-image > img:hover {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
-
 @keyframes shake {
   0% {
     transform: translate(1px, 1px) rotate(0deg);
@@ -1151,7 +1127,6 @@ button:focus {
 .form-login {
   height: 200px;
 }
-
 .incorrect-message,
 .correct-message {
   color: var(--white-color);
@@ -1175,6 +1150,8 @@ button:focus {
   background-color: var(--golden-color);
   box-shadow: 0 0 30px var(--golden-color);
 }
+
+/************ Login page => media queries *************/
 
 @media (min-width: 375px) {
   .incorrect-message,
@@ -1200,6 +1177,7 @@ button:focus {
     margin-bottom: 15px;
   }
 }
+
 @media (min-width: 1024px) {
   #section-two-login input {
     width: 300px;
@@ -1232,7 +1210,6 @@ button:focus {
     height: auto;
     padding: 20px 0px 20px 0px;
   }
-
   .incorrect-message,
   .correct-message {
     line-height: 2.2rem;

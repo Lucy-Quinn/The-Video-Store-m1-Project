@@ -16,10 +16,6 @@ function movieSelector() {
                 const filmId = document.getElementById('list-of-films');
                 const successRentedP = document.querySelector('.success-rented');
 
-
-                // const stars = document.createElement('div');
-
-
                 //set class attributes
                 article.setAttribute('class', 'movie-card');
                 movieContainer.setAttribute('class', 'movie-container');
@@ -27,7 +23,7 @@ function movieSelector() {
                 rentFilm.setAttribute('class', 'rent-film');
 
 
-                //amending html/styling
+                //adding html code
                 article.style.backgroundImage = `url('https://image.tmdb.org/t/p/w500${movie.poster_path}')`;
 
                 rentFilm.innerHTML = `
@@ -51,23 +47,10 @@ function movieSelector() {
                 `
 
 
-                // stars.innerHTML = `
-                // <section id="all-stars">
-                // <i id="1" class="stars fas fa-star"></i>
-                // <i id="2" class="stars fas fa-star"></i>
-                // <i id="3" class="stars fas fa-star"></i>
-                // <i id="4" class="stars fas fa-star"></i>
-                // <i id="5" class="stars fas fa-star"></i>
-                // </section> 
-                // `
-
-
-
                 //append elements to movieContainer
                 movieContainer.appendChild(article)
                 movieContainer.appendChild(overlay)
                 movieContainer.appendChild(rentFilm)
-                // movieContainer.appendChild(stars)
                 filmId.appendChild(movieContainer)
 
                 // Event listeners and functions for the movie-card and over-lay
@@ -101,45 +84,10 @@ function movieSelector() {
                         button.innerHTML = 'Movie Rented'
                     })
                 })
-
-
-
-
-                // stars.addEventListener('click', function (event) {
-                //     const targettedStar = event.target;
-                //     const starId = parseInt(targettedStar.id);
-                //     let starStringId = '';
-                //     console.log(targettedStar);
-                //     for (let i = 1; i < starId; i++) {
-                //         starStringId = i;
-                //         let turnGold = document.getElementById(`${starStringId}`);
-                //         turnGold.style.color = 'gold';
-                //     }
-                //     for (let i = 5; i > starId; i--) {
-                //         starStringId = i;
-                //         let turnGold = document.getElementById(`${starStringId}`);
-                //         console.log('turngold', turnGold);
-                //         turnGold.style.color = 'white';
-                //     }
-                //     // stars.querySelector('.stars')
-                //     // console.log(stars);
-                //     // // stars.setAttribute('class', 'stars')
-                //     // stars.classList.toggle("stars-full")
-                // });
-
-
             })
         })
 }
 movieSelector();
-
-
-//Heart function
-// function heartClick(event) {
-//     const click = event.target
-//     console.log(click);
-//     click.classList.toggle('heart-full')
-// }
 
 //Stars function
 function changeStars(event) {
@@ -157,10 +105,6 @@ function changeStars(event) {
         let turnGold = document.getElementById(`${starStringId}`);
         turnGold.style.color = 'white';
     }
-    // stars.querySelector('.stars')
-    // console.log(stars);
-    // // stars.setAttribute('class', 'stars')
-    // stars.classList.toggle("stars-full")
 }
 
 //Get genre function

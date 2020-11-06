@@ -1,5 +1,3 @@
-'use strict';
-
 class Signup {
     constructor() {
         this.nameInput = document.querySelector('#name');

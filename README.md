@@ -26,9 +26,7 @@ Are you a film buff and you need some inspiration? 🎬 Looking for that film th
 
 ## Wireframes
 
-[My Wireframe](https://www.figma.com/file/RStAiIeFMpl2eAKoACSoQi/Movies?node-id=11%3A4)
-
-[Navigation / User Flow]()
+[My Wireframe Mobile, Desktop and Flowchart](https://www.figma.com/file/RStAiIeFMpl2eAKoACSoQi/Movies?node-id=11%3A4)
 
 ## Data Structure
 
@@ -68,11 +66,11 @@ Are you a film buff and you need some inspiration? 🎬 Looking for that film th
 
 #### Trello
 
-[My 'Trello' board](https://trello.com/b/teWtYEzl/track-tracker)
+[My 'Trello' board](https://trello.com/invite/b/IwdKp5UT/b940bec81f72e38a5c02a215ba972628/the-video-store)
 
 #### GitHub
 
-[GitHub](https://lucy-quinn.github.io/The-Video-Store-m1-Project/signup.html)
+[GitHub](https://lucy-quinn.github.io/The-Video-Store-m1-Project/index.html)
 
 #### Slides
 
