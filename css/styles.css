@@ -751,7 +751,6 @@ button:focus {
   color: red;
   margin-left: 10px;
   margin-top: 10px;
-
   display: flex;
   align-items: center;
 }
@@ -938,7 +937,7 @@ button:focus {
   box-shadow: 0 0 30px rgb(48, 41, 4);
   color: var(--white-color);
   width: 80%;
-  height: 100px;
+  height: 110px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -1023,7 +1022,7 @@ button:focus {
     align-items: center;
   }
   .message-container {
-    line-height: 2.2rem;
+    line-height: 15px;
   }
 }
 
