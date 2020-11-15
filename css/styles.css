@@ -151,6 +151,10 @@ html {
 body {
   overflow: scroll;
   background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 main {
   width: 100%;
@@ -1038,7 +1042,7 @@ button:focus {
   #pulp-fiction > img {
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 70%;
     height: auto;
   }
   .sign-up-btn {
