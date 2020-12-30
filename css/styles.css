@@ -166,7 +166,8 @@ h1 {
   font-weight: 700;
 }
 h2 {
-  font-size: 3rem;
+  /* font-size: 3rem; */
+  font-size: 2.3rem;
 }
 h3 {
   font-size: 2rem;
@@ -648,13 +649,15 @@ button:focus {
   height: 500px;
   width: 320px;
   background-repeat: no-repeat;
-  background-size: contain;
+  /* background-size: contain; */
+  background-size: cover;
   background-position: top;
   border-radius: 10px;
 }
 .movie-card:hover {
   transition: 1.5s ease;
-  height: 480px;
+  color: var(--golden-color);
+  box-shadow: 0px 0px 20px 5px var(--golden-color);
 }
 .movie-container {
   position: relative;
@@ -672,17 +675,23 @@ button:focus {
 }
 .text-overlay p {
   text-align: justify;
-  font-size: 1.3rem;
-  line-height: 25px;
+  font-size: 1.2rem;
+  line-height: 17px;
 }
-.text-show p {
-  display: block;
+.text-overlay > .genre {
+  font-size: 1.2rem;
+  line-height: 7px;
+}
+.text-overlay > .rating {
+  line-height: 1px;
+  margin: 0 auto;
+  width: 111px;
 }
 .text-show {
   display: block;
   position: absolute;
   margin: 0 auto;
-  height: 490px;
+  height: 500px;
   width: 320px;
   border-radius: 10px;
   color: var(--white-color);
@@ -698,8 +707,8 @@ button:focus {
   flex-wrap: wrap;
   text-align: center;
   width: 200px;
-  margin: 0 auto;
-  margin-bottom: 10px;
+  margin: 17px auto;
+  margin-bottom: 17px;
 }
 .rent-film button {
   display: flex;
@@ -794,6 +803,7 @@ button:focus {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    margin: 10px;
     border-radius: 10px;
   }
   #section-two-movie-selector {
@@ -806,21 +816,45 @@ button:focus {
 }
 
 @media (min-width: 1024px) {
-  .movie-card {
-    height: 450px;
-  }
+  .movie-card,
+  .movie-card:hover,
+  .text-overlay,
   .text-show {
-    height: 450px;
+    /* height: 500px; */
+    height: 700px;
+    width: 450px;
+  }
+
+  .text-show {
+    /* height: 500px; */
   }
   .rent-film button {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     width: 120px;
     margin-top: 10px;
   }
+
+  .text-overlay h2 {
+    font-size: 2.8rem;
+  }
   .text-overlay p {
+    text-align: justify;
+    font-size: 1.6rem;
+    line-height: 25px;
+  }
+  .text-overlay > .genre {
+    font-size: 1.6rem;
+    line-height: 25px;
+  }
+  .text-overlay > .rating {
+    line-height: 25px;
+    margin: 0 auto;
+    width: 150px;
+  }
+  /* .text-overlay p {
     font-size: 1.5rem;
     line-height: 20px;
-  }
+  } */
 }
 
 /************ FAQ page ******************/

@@ -8,33 +8,23 @@ function movieSelector() {
             moviesArray.forEach((movie) => {
 
                 //create elements
+                const movieContainer = document.createElement('div');
                 const article = document.createElement('article');
                 const overlay = document.createElement('article');
-                const movieContainer = document.createElement('div');
                 const rentFilm = document.createElement('div');
                 const successRented = document.createElement('div');
                 const filmId = document.getElementById('list-of-films');
-                const successRentedP = document.querySelector('.success-rented');
+                // const successRentedP = document.querySelector('.success-rented');
 
                 //set class attributes
-                article.setAttribute('class', 'movie-card');
                 movieContainer.setAttribute('class', 'movie-container');
+                article.setAttribute('class', 'movie-card');
                 overlay.setAttribute('class', 'text-overlay');
                 rentFilm.setAttribute('class', 'rent-film');
-
 
                 //adding html code
                 article.style.backgroundImage = `url('https://image.tmdb.org/t/p/w500${movie.poster_path}')`;
 
-                rentFilm.innerHTML = `
-                <button id="rent-button">Rent Movie</button>
-                 <i class="fas fa-heart"></i>
-                `
-
-                successRented.innerHTML = `
-                    <p class="success-rented">Enjoy your movie!</p>
-                    <br>
-                `
                 overlay.innerHTML = `
                 <h2>${movie.title}</h2>
                 <br>
@@ -46,14 +36,23 @@ function movieSelector() {
                 <br>
                 `
 
+                rentFilm.innerHTML = `
+                <button id="rent-button">Rent Movie</button>
+                 <i class="fas fa-heart"></i>
+                `
+
+                successRented.innerHTML = `
+                    <p class="success-rented">Enjoy your movie!</p>
+                    <br>
+                `
 
                 //append elements to movieContainer
+                filmId.appendChild(movieContainer)
                 movieContainer.appendChild(article)
                 movieContainer.appendChild(overlay)
                 movieContainer.appendChild(rentFilm)
-                filmId.appendChild(movieContainer)
 
-                // Event listeners and functions for the movie-card and over-lay
+                // Event listeners and functions for the over-lay
                 article.addEventListener('click', function () {
                     overlay.classList.toggle('text-show');
                 })
@@ -62,7 +61,7 @@ function movieSelector() {
                 })
 
                 //Event listener and function for heart toggle
-                const hearts = movieContainer.querySelectorAll('.fa-heart')
+                const hearts = movieContainer.querySelectorAll('.fa-heart');
                 hearts.forEach((heart) => {
                     heart.addEventListener('click', function (event) {
                         const click = event.target
