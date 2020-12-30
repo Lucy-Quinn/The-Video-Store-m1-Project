@@ -166,7 +166,6 @@ h1 {
   font-weight: 700;
 }
 h2 {
-  /* font-size: 3rem; */
   font-size: 2.3rem;
 }
 h3 {
@@ -192,7 +191,6 @@ a:active {
 a:hover {
   text-decoration: none;
 }
-
 .h1-styling {
   width: 100%;
   height: auto;
@@ -239,7 +237,8 @@ footer > p {
   font-weight: 700;
 }
 .navbar-nav a:hover {
-  font-weight: 700;
+  color: #ffee10;
+  text-shadow: 0 5px 10px #ffee10;
 }
 .navbar-nav {
   flex-direction: column;
@@ -300,6 +299,7 @@ button:focus {
     height: 200px;
   }
 }
+
 @media (min-width: 1024px) {
   .nav-logo {
     margin-bottom: 20px;
@@ -324,6 +324,7 @@ button:focus {
     font-size: 1.2rem;
   }
 }
+
 @media (min-width: 1440px) {
   .nav-bar {
     width: 600px;
@@ -343,7 +344,6 @@ button:focus {
   p {
     font-size: 2.2rem;
   }
-
   #navbarNav a {
     font-size: 2.2rem;
   }
@@ -384,14 +384,12 @@ button:focus {
 .btn-enter a h3:hover {
   font-size: 3rem;
 }
-
 #section-one-index {
   width: 100%;
   height: 250px;
   padding: 10px;
   display: flex;
 }
-
 #quotes {
   display: flex;
   flex-wrap: wrap;
@@ -417,7 +415,6 @@ button:focus {
   text-align: center;
   margin: 0px 5px;
 }
-
 .hidden-quote-taken,
 .hidden-quote-shinning,
 .hidden-quote-spiderman,
@@ -459,7 +456,6 @@ button:focus {
 }
 
 /********** Index page => Media Queries **************/
-
 @media (min-width: 375px) {
   .quote-wizard-oz {
     margin-left: 50px;
@@ -476,7 +472,6 @@ button:focus {
     margin-left: 130px;
     margin-top: 10px;
   }
-
   .hidden-quote-shinning {
     display: block;
     margin: 10px 10px 0px 0px;
@@ -649,7 +644,6 @@ button:focus {
   height: 500px;
   width: 320px;
   background-repeat: no-repeat;
-  /* background-size: contain; */
   background-size: cover;
   background-position: top;
   border-radius: 10px;
@@ -780,7 +774,6 @@ button:focus {
 }
 
 /********** Movie-selector page => media-queries ************/
-
 @media (min-width: 375px) {
   .text-show {
     margin-left: 28px;
@@ -820,20 +813,14 @@ button:focus {
   .movie-card:hover,
   .text-overlay,
   .text-show {
-    /* height: 500px; */
     height: 700px;
     width: 450px;
-  }
-
-  .text-show {
-    /* height: 500px; */
   }
   .rent-film button {
     font-size: 1.6rem;
     width: 120px;
     margin-top: 10px;
   }
-
   .text-overlay h2 {
     font-size: 2.8rem;
   }
@@ -851,10 +838,6 @@ button:focus {
     margin: 0 auto;
     width: 150px;
   }
-  /* .text-overlay p {
-    font-size: 1.5rem;
-    line-height: 20px;
-  } */
 }
 
 /************ FAQ page ******************/
