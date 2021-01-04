@@ -14,8 +14,6 @@ class Database {
         usersArr.push(newUser);
         const updatedUsersStr = JSON.stringify(usersArr);
         localStorage.setItem('users', updatedUsersStr);
-
-
     }
 }
 

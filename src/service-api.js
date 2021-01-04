@@ -7,14 +7,16 @@ function movieSelector() {
             const moviesArray = data.results
             moviesArray.forEach((movie) => {
 
+                //get element 
+                const filmId = document.getElementById('list-of-films');
+
                 //create elements
                 const movieContainer = document.createElement('div');
                 const article = document.createElement('article');
                 const overlay = document.createElement('article');
                 const rentFilm = document.createElement('div');
                 const successRented = document.createElement('div');
-                const filmId = document.getElementById('list-of-films');
-                // const successRentedP = document.querySelector('.success-rented');
+                const stars = document.createElement('div');
 
                 //set class attributes
                 movieContainer.setAttribute('class', 'movie-container');
@@ -46,11 +48,22 @@ function movieSelector() {
                     <br>
                 `
 
+                stars.innerHTML = `
+                <section id="all-stars">
+                <i class="1${movie.title} stars fas fa-star"></i>
+                <i class="2${movie.title} stars fas fa-star"></i>
+                <i class="3${movie.title} stars fas fa-star"></i>
+                <i class="4${movie.title} stars fas fa-star"></i>
+                <i class="5${movie.title} stars fas fa-star"></i>
+                </section> 
+                `
+
                 //append elements to movieContainer
                 filmId.appendChild(movieContainer)
                 movieContainer.appendChild(article)
                 movieContainer.appendChild(overlay)
                 movieContainer.appendChild(rentFilm)
+                movieContainer.appendChild(stars)
 
                 // Event listeners and functions for the over-lay
                 article.addEventListener('click', function () {
@@ -83,28 +96,32 @@ function movieSelector() {
                         button.innerHTML = 'Movie Rented'
                     })
                 })
+
+                //Event listener and function for star ratings
+                const starSet = movieContainer.querySelectorAll('.fa-star');
+                starSet.forEach((star) => {
+                    star.addEventListener('click', function (event) {
+                        const targettedStar = event.target;
+                        const starClass = targettedStar.classList.value.charAt(0)
+                        let starStringId = '';
+                        for (let i = 1; i <= starClass; i++) {
+                            starStringId = i;
+                            let turnGold = document.getElementsByClassName(`${starStringId}${movie.title}`)[0];
+                            turnGold.style.color = 'gold';
+                        }
+                        for (let i = 5; i > starClass; i--) {
+                            starStringId = i;
+                            let turnGold = document.getElementsByClassName(`${starStringId}${movie.title}`)[0];
+                            turnGold.style.color = 'white';
+                        }
+                    })
+                });
             })
         })
 }
 movieSelector();
 
-//Stars function
-function changeStars(event) {
-    const targettedStar = event.target;
-    const starId = parseInt(targettedStar.id);
-    let starStringId = '';
-    for (let i = 1; i <= starId; i++) {
-        starStringId = i;
-        let turnGold = document.getElementById(`${starStringId}`);
-        turnGold.style.color = 'gold';
-    }
 
-    for (let i = 5; i >= starId; i--) {
-        starStringId = i;
-        let turnGold = document.getElementById(`${starStringId}`);
-        turnGold.style.color = 'white';
-    }
-}
 
 //Get genre function
 function getGenre(genreArr) {
