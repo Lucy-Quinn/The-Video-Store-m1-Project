@@ -655,6 +655,7 @@ button:focus {
 }
 .movie-container {
   position: relative;
+  cursor: pointer;
 }
 .movie-card p {
   display: none;
