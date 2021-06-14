@@ -457,20 +457,25 @@ button:focus {
 
 /********** Index page => Media Queries **************/
 @media (min-width: 375px) {
+  .quote-lord-of-the-rings {
+    margin-top: 11px;
+    margin-left: 21px;
+  }
   .quote-wizard-oz {
-    margin-left: 50px;
+    margin-left: 105px;
   }
   .quote-forest-gump {
     height: 50px;
     margin-top: 10px;
   }
   .quote-dirty-dancing {
-    margin-left: 100px;
+    margin-left: 125px;
+    margin-top: -27px;
     height: 50px;
   }
   .quote-jerry-maguire {
-    margin-left: 130px;
-    margin-top: 10px;
+    margin-left: 159px;
+    margin-top: 5px;
   }
   .hidden-quote-shinning {
     display: block;
